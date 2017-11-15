@@ -32,19 +32,29 @@ body
 	font-weight: 900
 
 .container
-	width: $container-width
 	display: flex
+	width: $container-width
 	flex-direction: column
 	justify-content: center
+	position: relative
 
 .wrapper
 	min-height: 100vh
 	position: relative
 	overflow: hidden
+	padding: 0 50px
 
 	.header
+		display: flex
 		position: absolute
 		height: 50px
+		justify-content: space-between
+		align-items: center
+		margin-top: 50px
+		.logo
+			background-image: url('../img/logo.png')
+			width: 52px
+			height: 50px
 
 	.nav
 		position: absolute
@@ -63,14 +73,18 @@ body
 		.first
 			height: 100vh
 			justify-content: center
-			display: flex       
-
-			.section-inner
-
+			display: flex
+			position: relative
+			.bg-triangles
+				position: absolute
+				background-image: url('../img/bg-triangles.svg')
+				width: 352px
+				height: 176px
+				top: 0
+				right: 45px
 			.slider
 				display: flex
 				width: 100%
-
 				.show
 					display: block
 				&-item
