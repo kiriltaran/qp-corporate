@@ -153,13 +153,34 @@ body
 
 		.fourth
 			height: 100vh
+			position: relative
 			display: flex
 			justify-content: center
+
+			.bg-container
+				position: absolute
+				height: 100%
+				width: 100%
+				top: 0
+				left: 0
+
+				.bg
+					position: relative
+					width: 0
+					height: 0
+					border-bottom: 100vh solid #A28CEC
+					border-right: 100vw solid transparent
 
 			.container
 				display: flex
 				flex-direction: column
 				justify-content: center
+				position: relative
+
+				.hand
+					position: absolute
+					bottom: 0
+					right: -50px
 
 				.map-and-contacts
 					justify-content: center
@@ -218,6 +239,7 @@ body
 								padding: 8px 1px
 								font-size: 12px
 								outline: none
+								background: rgba(0,0,0,0)
 
 								&::placeholder
 									opacity: 0.4
@@ -225,6 +247,9 @@ body
 									font-size: 12px
 									font-weight: 300
 									color: #000000
+
+								&:first-child
+									margin-right: 78px
 
 
 						.textarea
@@ -236,6 +261,7 @@ body
 								height: 130px
 								border-radius: 2px
 								outline: none
+								border: none
 
 						.button
 							text-align: right
