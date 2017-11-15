@@ -100,52 +100,52 @@
 			<section class="third"></section>
 			<section class="fourth">
 				<div class="container">
-					<div class="map-and-contacts">
-						<div class="map">
+          <div class="map-and-contacts">
+              <div class="map" id="map">
 
-						</div>
-						<div class="contacts">
-							<div class="address">
-								<h6>Киев, Украина</h6>
-								<p>Quantum Projects | Digital-агентство</p>
-								<p>Веб-студия создание и разработка сайтов</p>
-							</div>
-							<div class="phone">
-								<h6>Телефон:</h6>
-								<p>+38 (093) 971 63 36</p>
-							</div>
-							<div class="skype">
-								<h6>Skype:</h6>
-								<p>quantum</p>
-							</div>
-							<div class="mail">
-								<h6>Email:</h6>
-								<p>info@quantum_projects.net</p>
-							</div>
-							<div class="social">
-								<a href=""></a>
-								<a href=""></a>
-							</div>
-						</div>
-					</div>
-					<div class="form">
-						<div class="title">
-							<h2>Обратная связь:</h2>
-						</div>
-						<form action="">
-							<div class="inputs">
-								<input type="text">
-								<input type="text">
-							</div>
-							<div class="textarea">
-								<textarea name="" id="" cols="30" rows="10"></textarea>
-							</div>
-							<div class="button">
-								<button>отправить запрос</button>
-							</div>
-						</form>
-					</div>
-				</div>
+              </div>
+              <div class="contacts">
+                  <div class="address">
+                      <h6>Киев, Украина</h6>
+                      <p>Quantum Projects | Digital-агентство</p>
+                      <p>Веб-студия создание и разработка сайтов</p>
+                  </div>
+                  <div class="phone">
+                      <h6>Телефон:</h6>
+                      <p>+38 (093) 971 63 36</p>
+                  </div>
+                  <div class="skype">
+                      <h6>Skype:</h6>
+                      <p>quantum</p>
+                  </div>
+                  <div class="mail">
+                      <h6>Email:</h6>
+                      <p>info@quantum_projects.net</p>
+                  </div>
+                  <div class="social">
+                      <a href=""></a>
+                      <a href=""></a>
+                  </div>
+              </div>
+          </div>
+          <div class="form">
+              <div class="title">
+                  <h2>Обратная связь:</h2>
+              </div>
+              <form>
+                  <div class="inputs">
+                      <input type="email" placeholder="E-mail">
+                      <input type="text" placeholder="Ваше имя">
+                  </div>
+                  <div class="textarea">
+                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                  </div>
+                  <div class="button">
+                      <button>отправить запрос</button>
+                  </div>
+              </form>
+          </div>
+      </div>
 			</section>
 			<section class="web"></section>
 			<section class="mobile"></section>
@@ -161,7 +161,22 @@
 	</div>
 
 	<script src="js/scripts.min.js"></script>
-
+    <script>
+        function initMap() {
+            var uluru = {lat: 50.395794, lng: 30.501574};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 18,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQ--uMQILR52x6-sZYlALIcVDSFBN8_0&callback=initMap">
+    </script>
 </body>
 
 </html>
