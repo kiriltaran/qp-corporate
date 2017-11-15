@@ -57,7 +57,7 @@
 			<section class="fourth">
 				<div class="container">
                     <div class="map-and-contacts">
-                        <div class="map">
+                        <div class="map" id="map">
                             
                         </div>
                         <div class="contacts">
@@ -88,10 +88,10 @@
                         <div class="title">
                             <h2>Обратная связь:</h2>
                         </div>
-                        <form action="">
+                        <form>
                             <div class="inputs">
-                                <input type="text">
-                                <input type="text">
+                                <input type="email" placeholder="E-mail">
+                                <input type="text" placeholder="Ваше имя">
                             </div>
                             <div class="textarea">
                                 <textarea name="" id="" cols="30" rows="10"></textarea>
@@ -117,7 +117,22 @@
 	</div>
 
 	<script src="js/scripts.min.js"></script>
-
+    <script>
+        function initMap() {
+            var uluru = {lat: 50.395794, lng: 30.501574};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 18,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQ--uMQILR52x6-sZYlALIcVDSFBN8_0&callback=initMap">
+    </script>
 </body>
 
 </html>
