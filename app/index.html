@@ -24,10 +24,6 @@
 
 <body>
   <div class="wrapper">
-    <div class="bg-line"></div>
-    <div class="bg-line"></div>
-    <div class="bg-line"></div>
-    <div class="bg-line"></div>
     <div class="elements">
       <div class="elements-inner">
         <header class="header">
@@ -124,6 +120,11 @@
     <main class="main">
       <section class="section first">
         <div class="container">
+          <div class="container-bg">
+            <div class="container-bg-col"></div>
+            <div class="container-bg-col"></div>
+            <div class="container-bg-col"></div>
+          </div>
           <div class="bg-triangles animated rollIn">
             <svg xmlns="http://www.w3.org/2000/svg" width="352" height="176" viewBox="0 0 352 176">
               <defs>
@@ -142,8 +143,8 @@
           </div>
           <div class="section-inner">
             <div class="slider">
-              <div class="slider-item mobile show animated fadeInLeftBig">
-                <div class="slider-item-square" id="scene">
+              <div class="slider-item mobile show">
+                <div class="slider-item-square" id="slide1">
                   <div class="square-img" data-depth="0.2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="361" height="359" viewBox="0 0 361 359" class="triangle">
                       <path fill="none" fill-rule="evenodd" stroke="#F4F96F" stroke-width="70" d="M180.5 77.916L56.772 324h247.456L180.5 77.916z"
@@ -191,9 +192,39 @@
                 </div>
               </div>
               <div class="slider-item web">
-                <div class="slider-item-square">
-                  <img class="square-img mac" src="img/mac.png" alt="mac" data-depth="0.2">
-                  <img class="square-img cofe" src="img/cofe.png" alt="cofe" data-depth="0.6">
+                <div class="slider-item-square" id="slide2">
+                  <div class="square-img" data-depth="0.2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="361" height="359" viewBox="0 0 361 359" class="triangle">
+                      <path fill="none" fill-rule="evenodd" stroke="#F4F96F" stroke-width="70" d="M180.5 77.916L56.772 324h247.456L180.5 77.916z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="square-img" data-depth="0.5">
+                    <img class="mac" src="img/mac.png" alt="mac">
+                  </div>
+                  <div class="square-img" data-depth="0.5">
+                    <img class="cofe" src="img/cofe.png" alt="cofe">
+                  </div>
+                  <div class="square-arrows">
+                    <div class="arrows-inner">
+                      <div class="square-arrows-item prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="matrix(0 -1 -1 0 27 27)">
+                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="square-arrows-item next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="rotate(90 14 13)">
+                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="slider-item-title">
                   <h2 class="title">
