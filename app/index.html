@@ -33,6 +33,12 @@
       </header>
       <nav class="nav"></nav>
       <div class="socials"></div>
+      <div class="section-name">
+        <h2>Главная</h2>
+        <h2>Преймущества</h2>
+        <h2>Команда</h2>
+        <h2>Контакты</h2>
+      </div>
     </div>
     <main class="main">
       <section class="section first">
@@ -40,11 +46,17 @@
           <div class="bg-triangles"></div>
           <div class="section-inner">
             <div class="slider">
-              <div class="slider-item mobile">
-                <div class="slider-item-square">
-                  <img class="square-img triangle" src="img/triangle.svg" alt="triangle">
-                  <img class="square-img iphone" src="img/iphone.png" alt="iphone">
-                  <img class="square-img astronaut" src="img/astronaut.png" alt="astronaut">
+              <div class="slider-item mobile show">
+                <div class="slider-item-square" id="scene">
+                  <div class="square-img" data-depth="0.2">
+                    <img class="triangle" src="img/triangle.svg" alt="triangle">
+                  </div>
+                  <div class="square-img" data-depth="0.5">
+                    <img class="iphone" src="img/iphone.png" alt="iphone">
+                  </div>
+                  <div class="square-img" data-depth="0.8">
+                    <img class="astronaut" src="img/astronaut.png" alt="astronaut">
+                  </div>
                 </div>
                 <div class="slider-item-title">
                   <h2 class="title">
@@ -59,10 +71,10 @@
                   </ul>
                 </div>
               </div>
-              <div class="slider-item web show">
+              <div class="slider-item web">
                 <div class="slider-item-square">
-                  <img class="square-img mac" src="img/mac.png" alt="mac">
-                  <img class="square-img cofe" src="img/cofe.png" alt="cofe">
+                  <img class="square-img mac" src="img/mac.png" alt="mac" data-depth="0.2">
+                  <img class="square-img cofe" src="img/cofe.png" alt="cofe" data-depth="0.6">
                 </div>
                 <div class="slider-item-title">
                   <h2 class="title">
@@ -162,12 +174,6 @@
       <section class="mobile"></section>
       <section class="lead"></section>
     </main>
-    <div class="section-name">
-      <h2>Главная</h2>
-      <h2>Преймущества</h2>
-      <h2>Команда</h2>
-      <h2>Контакты</h2>
-    </div>
   </div>
   
   <script src="js/scripts.min.js"></script>
@@ -189,6 +195,7 @@
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQ--uMQILR52x6-sZYlALIcVDSFBN8_0&callback=initMap">
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 </body>
 
 </html>

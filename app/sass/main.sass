@@ -3,12 +3,8 @@
 @import "vars"
 
 *
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
 	box-sizing: border-box
 	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
 		box-sizing: border-box
 
 html, body
@@ -106,21 +102,24 @@ body
 						height: 100%
 						z-index: 100
 						.square-img
-							position: absolute
-						.triangle
-							right: 20px
-						.iphone
-							right: 90px
-							top: 10px
-						.astronaut
-							right: 95px
-							top: 190px
-						.mac
-							right: 15px
-							top: 55px
-						.cofe
-							right: 300px
-							top: 275px
+							width: 100%
+							.triangle
+								right: 20px
+								position: absolute
+							.iphone
+								right: 90px
+								top: 10px
+								position: absolute
+							.astronaut
+								right: 95px
+								top: 190px
+								position: absolute
+							.mac
+								right: 15px
+								top: 55px
+							.cofe
+								right: 300px
+								top: 275px
 					&-title
 						position: relative 
 						z-index: 200
