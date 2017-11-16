@@ -34,6 +34,7 @@ body
 	justify-content: center
 	position: relative
 	&-bg
+		z-index: -1
 		font-size: 0
 		position: absolute
 		width: 100%
@@ -189,7 +190,6 @@ body
 							position: absolute
 							left: 0
 							bottom: 0
-							
 							.arrows-inner
 								width: 90px
 								position: absolute
@@ -269,42 +269,33 @@ body
 			position: relative
 			display: flex
 			justify-content: center
-
-			.bg-container
+			.bg
 				position: absolute
 				height: 100%
 				width: 100%
-				top: 0
-				left: 0
-
-				.bg
-					position: relative
-					width: 0
-					height: 0
-					border-bottom: 100vh solid #A28CEC
-					border-right: 100vw solid transparent
-
+				border-bottom: 100vh solid #A28CEC
+				border-right: 100vw solid transparent
 			.container
 				display: flex
 				flex-direction: column
 				justify-content: center
 				position: relative
-
-				.hand
+				.bg-hand
+					background-image: url('../img/hand.png')
 					position: absolute
 					bottom: 0
 					right: -50px
-
+					width: 320px
+					height: 450px
+					opacity: .79
 				.map-and-contacts
 					justify-content: center
 					display: flex
 					align-items: center
-
 					.map
 						height: 315px
 						width: 576px
 						border: solid 2px #6a44e5
-
 					.contacts
 						margin-left: 21px
 						height: 315px
@@ -312,54 +303,38 @@ body
 						display: flex
 						align-items: flex-start
 						flex-direction: column
-
 						h6
 							margin: 0
 							font-weight: 700
 							font-size: 16px
 							line-height: 20px
-
 						p
 							margin: 0
 							font-weight: 300
 							font-size: 16px
 							line-height: 20px
-
 						.social
-
 							a
 								margin-right: 11px
-
 								&:last-child
 									margin-right: 0
-
 								.svg
 									transition: all 0.5s ease
-
 								&:hover
-
 									.svg
 										fill: #6a44e5
-
-
 				.form
 					margin-top: 25px
-
 					.title
 						margin-bottom: 20px
-
 						h2
 							margin: 0
 							font-size: 24px
 							font-weight: 900
-
-
 					form
 						width: 543px
-
 						.inputs
 							margin-bottom: 20px
-
 							input
 								border: none
 								border-bottom: solid 1px #000000
@@ -369,21 +344,16 @@ body
 								font-size: 12px
 								outline: none
 								background: rgba(0,0,0,0)
-
 								&::placeholder
 									opacity: 0.4
 									font-family: "Roboto" , sans-serif
 									font-size: 12px
 									font-weight: 300
 									color: #000000
-
 								&:first-child
 									margin-right: 78px
-
-
 						.textarea
 							width: 100%
-
 							textarea
 								width: 100%
 								resize: none
@@ -391,10 +361,8 @@ body
 								border-radius: 2px
 								outline: none
 								border: none
-
 						.button
 							text-align: right
-
 							button
 								width: 150px
 								height: 31px
@@ -407,11 +375,8 @@ body
 								border: none
 								outline: none
 								transition: all 0.5s ease
-
 								&:hover
 									box-shadow: 0 10px 10px -5px rgb(229, 74, 33)
-
-
 		.web
 
 		.mobile
