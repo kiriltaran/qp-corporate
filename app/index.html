@@ -181,10 +181,46 @@
         zoom: 18,
         center: uluru
       });
-      var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-      });
+
+        var contentString = '<div >'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<div id="bodyContent">'+
+            '<p>Васильковская 14, оф. 404</p>'+
+            '</div>'+
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        var image = 'img/combined-shape.png';
+        var marker = new google.maps.Marker({
+            position: {lat: 50.395794, lng: 30.501574},
+            map: map,
+            icon: image
+        });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+        google.maps.event.addListener(infowindow, 'domready', function() {
+
+            var iwOuter = $('.gm-style-iw');
+
+            var iwBackground = iwOuter.prev();
+
+            iwBackground.children(':nth-child(2)').css({
+                'background': '#252525'
+            });
+
+            var iwmain = iwBackground.children(':nth-child(2)');
+
+            iwBackground.children(':nth-child(4)').css({
+                'display': 'none'
+            });
+
+            var iwCloseBtn = iwOuter.next();
+
+        });
+
     }
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQ--uMQILR52x6-sZYlALIcVDSFBN8_0&callback=initMap">
