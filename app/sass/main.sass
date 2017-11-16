@@ -49,7 +49,9 @@ body
 			position: relative
 			width: 100%
 			height: 100%
+			z-index: 900
 			.header
+				width: 100%
 				display: flex
 				position: absolute
 				height: 50px
@@ -61,6 +63,40 @@ body
 					width: 52px
 					height: 50px
 					z-index: 500
+				.burger
+					width: 35px
+					line-height: 0
+					&:hover
+						cursor: pointer
+						.mid
+							&-line
+								width: 15px
+							&-text
+								opacity: 1
+								transition: opacity .5s
+								
+					&-line
+						width: 30px
+						height: 4px
+						border-radius: 100px
+						background-color: #000000
+						transition: width .5s						
+					.mid
+						font-size: 0
+						display: block
+						margin: 4px 0
+						&-line
+							width: 30px
+							display: inline-block
+						&-text
+							width: 0
+							display: inline-block
+							text-transform: lowercase
+							font-size: 10px
+							font-weight: 800
+							color: #5021e5
+							margin-left: 2px
+							opacity: 0
 			.nav
 				position: absolute
 				width: 30px
@@ -126,6 +162,20 @@ body
 						width: 660px
 						height: 100%
 						z-index: 100
+						.square-arrows
+							position: absolute
+							left: 0
+							bottom: 0 
+							.arrows-inner
+								width: 90px
+								position: absolute
+								bottom: 25px
+								left: 30px
+							&-item
+								text-align: center
+								display: inline-block
+								transform: rotate(-90deg)
+								margin-right: 15px
 						.square-img
 							width: 100%
 							.triangle
@@ -165,6 +215,7 @@ body
 						position: absolute
 						left: 0
 						bottom: 0
+						width: 100%
 						.list
 							padding: 0
 							margin: 0
