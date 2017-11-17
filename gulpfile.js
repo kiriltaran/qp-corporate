@@ -12,9 +12,20 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	ftp = require('vinyl-ftp'),
 	notify = require("gulp-notify"),
-	rsync = require('gulp-rsync');
+	rsync = require('gulp-rsync'),
+	rigger = require('gulp-rigger'),
+	removeFiles = require('gulp-remove-files');
 
 // Пользовательские скрипты проекта
+
+gulp.task('html', ['clearHtml'], function () {
+	return gulp.src('app/templates/*.html') //Выберем файлы по нужному пути
+		.pipe(rigger()) //Прогоним через rigger
+		.pipe(gulp.dest('app')) //Выплюнем их в папку build
+		.pipe(browserSync.reload({
+			stream: true
+		})); //И перезагрузим наш сервер для обновлений
+});
 
 gulp.task('common-js', function () {
 	return gulp.src([
@@ -31,7 +42,7 @@ gulp.task('js', ['common-js'], function () {
 			'app/js/common.min.js', // Всегда в конце
 		])
 		.pipe(concat('scripts.min.js'))
-		// .pipe(uglify()) // Минимизировать весь js (на выбор)
+		.pipe(uglify()) // Минимизировать весь js (на выбор)
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.reload({
 			stream: true
@@ -66,10 +77,12 @@ gulp.task('sass', function () {
 		}));
 });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function () {
+gulp.task('watch', ['html', 'sass', 'js', 'browser-sync'], function () {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
+	gulp.watch('app/templates/**/*.html', ['html']);
 	gulp.watch('app/*.html', browserSync.reload);
+
 });
 
 gulp.task('imagemin', function () {
@@ -132,6 +145,11 @@ gulp.task('rsync', function () {
 			silent: false,
 			compress: true
 		}));
+});
+
+gulp.task('clearHtml', function () {
+	gulp.src('app/index.html')
+		.pipe(removeFiles());
 });
 
 gulp.task('removedist', function () {
