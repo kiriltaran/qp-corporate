@@ -60,8 +60,15 @@ body
 			height: 100%
 			opacity: 0.15
 			border-left: 1px solid #5325e5
+			animation: height-column 3s linear
 			&:last-child
 				border-right: 1px solid #5325e5
+
+@keyframes height-column
+	from
+		height: 0%
+	to
+		height: 100%
 .wrapper
 	min-height: 100vh
 	position: relative
@@ -79,8 +86,6 @@ body
 		@import "mobile"
 		@import "lead"
 
-
-
 .gm-style .gm-style-iw
 	background-color: #6a44e5 !important
 	top: 0 !important
@@ -90,13 +95,10 @@ body
 	min-height: 40px !important
 	padding: 20px 5px
 	display: block !important
-
-
+	
 /*style the p tag*/
 .gm-style .gm-style-iw #google-popup p
 	padding: 10px
-
-
 
 /*style the arrow*/
 .gm-style div div div div div div div div
