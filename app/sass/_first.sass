@@ -1,0 +1,98 @@
+.first
+			height: 100vh
+			justify-content: center
+			display: flex
+			position: relative
+			.bg-triangles
+				position: absolute
+				top: 0
+				right: 45px
+			.slider
+				display: flex
+				width: 100%
+				.show
+					display: block
+				&-item
+					position: relative
+					height: 450px
+					display: none
+					width: 100%
+					&-square
+						position: absolute
+						top: 0
+						right: 0
+						border-radius: 4px
+						width: 660px
+						height: 100%
+						z-index: 100
+						.square-arrows
+							position: absolute
+							left: 0
+							bottom: 0
+							.arrows-inner
+								width: 90px
+								position: absolute
+								bottom: 25px
+								left: 30px
+							&-item
+								text-align: center
+								display: inline-block
+								transform: rotate(-90deg)
+								margin-right: 15px
+						.square-img
+							width: 100%
+							.triangle
+								right: 20px
+								position: absolute
+							.iphone
+								right: 90px
+								top: 10px
+								position: absolute
+							.astronaut
+								right: 95px
+								top: 190px
+								position: absolute
+							.mac
+								right: 15px
+								top: 55px
+								position: absolute
+							.cofe
+								right: 300px
+								top: 275px
+								position: absolute
+					&-title
+						position: relative 
+						z-index: 200
+						top: 110px
+						.title
+							font-family: $second-font
+							font-size: 48px
+							line-height: 48px
+							margin: 0
+							letter-spacing: 2.4px
+							font-weight: 300
+						.subtitle
+							letter-spacing: 6px
+							text-transform: lowercase
+							margin-left: 285px
+					&-list
+						position: absolute
+						left: 0
+						bottom: 0
+						width: 100%
+						.list
+							padding: 0
+							margin: 0
+							list-style-position: inside
+							&-item
+								letter-spacing: 0.8px
+								font-family: 'Roboto', sans-serif
+				.mobile
+					.slider-item-square
+						background-color: #aae64c
+				.web
+					.slider-item-square
+						background-color: #af96ff
+				.lead
+					.slider-item-square
+						background-color: #e386f8
