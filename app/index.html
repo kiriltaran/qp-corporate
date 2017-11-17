@@ -24,33 +24,156 @@
 </head>
 
 <body>
-<div class="wrapper">
-    <div class="bg-line"></div>
-    <div class="bg-line"></div>
-    <div class="bg-line"></div>
-    <div class="bg-line"></div>
+
+  <div class="wrapper">
     <div class="elements">
-        <div class="elements-inner">
-            <header class="header">
-                <div class="logo"></div>
-                <div class="burger">
-                    <div class="burger-line top"></div>
-                    <div class="mid">
-                        <div class="burger-line mid-line"></div>
-                        <div class="mid-text">Меню</div>
-                    </div>
-                    <div class="burger-line bot"></div>
-                </div>
-            </header>
-            <nav class="nav animated fadeInLeft">
-                <ul class="nav-list">
-                    <li class="nav-list-item active">01</li>
-                    <li class="nav-list-item">02</li>
-                    <li class="nav-list-item">03</li>
-                    <li class="nav-list-item">04</li>
-                </ul>
-                <div class="nav-arrows">
-                    <div class="nav-arrows-item prev">
+      <div class="elements-inner">
+        <header class="header">
+          <a href="/" class="logo"></a>
+          <div class="burger">
+            <div class="burger-line top"></div>
+            <div class="mid">
+              <div class="burger-line mid-line"></div>
+              <div class="mid-text">Меню</div>
+            </div>
+            <div class="burger-line bot"></div>
+          </div>
+        </header>
+        <nav class="nav animated fadeInLeft">
+          <ul class="nav-list">
+            <li class="nav-list-item active">01</li>
+            <li class="nav-list-item">02</li>
+            <li class="nav-list-item">03</li>
+            <li class="nav-list-item">04</li>
+          </ul>
+          <div class="nav-arrows">
+            <div class="nav-arrows-item prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <g fill="none" fill-rule="evenodd" stroke="#000" transform="matrix(0 -1 -1 0 27 27)">
+                  <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
+                </g>
+              </svg>
+            </div>
+            <div class="nav-arrows-item next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <g fill="none" fill-rule="evenodd" stroke="#000" transform="rotate(90 14 13)">
+                  <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </nav>
+        <div class="socials">
+          <ul class="socials-list">
+            <li class="socials-list-item">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                  <g fill="none" fill-rule="evenodd">
+                    <path class="social-hover" fill="#000" fill-rule="nonzero" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10s4.477 10 10 10 10-4.477 10-10z"
+                    />
+                    <path stroke="#FFF" d="M18.8 10a8.8 8.8 0 1 0-17.6 0 8.8 8.8 0 0 0 17.6 0z" />
+                    <path fill="#FFF" d="M10.176 5.59c-.252 0-.5.021-.74.061A2.702 2.702 0 0 0 7.94 5.2C6.426 5.2 5.2 6.445 5.2 7.98c0 .559.162 1.078.441 1.514a4.68 4.68 0 0 0-.057.73c0 2.56 2.055 4.635 4.592 4.635.286 0 .565-.028.836-.078.42.265.916.419 1.448.419 1.514 0 2.74-1.245 2.74-2.78 0-.58-.175-1.12-.476-1.567.028-.206.044-.415.044-.629 0-2.559-2.056-4.634-4.592-4.634z"
+                    />
+                    <path class="social-hover" fill="#000" d="M7.987 11.477c.57-.038.911.659 1.215.852.304.194 1.459.634 2.069-.077.664-.775-.442-1.175-1.253-1.296-1.157-.175-2.619-.814-2.505-2.072.114-1.257 1.048-1.902 2.03-1.993 1.253-.116 2.069.193 2.714.755.746.648.342 1.373-.133 1.431-.474.058-1.005-1.066-2.049-1.083-1.076-.017-1.803 1.141-.475 1.47 1.329.33 2.752.465 3.264 1.704.513 1.239-.796 2.554-2.258 2.632-1.46.077-2.144-.252-2.77-.851-.7-.67-.419-1.433.151-1.472z"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list-item">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                  <g fill="none" fill-rule="evenodd">
+                    <path class="social-hover" fill="#000" fill-rule="nonzero" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0z"
+                    />
+                    <path stroke="#FFF" d="M10 1.2a8.8 8.8 0 1 0 0 17.6 8.8 8.8 0 0 0 0-17.6z" />
+                    <path fill="#FFF" d="M14.8 12.786V6.8l-3.495 3.386zM5.2 12.786l3.495-2.6L5.2 6.8zM9.166 10.642L5.2 13.2h9.6l-3.966-2.558-.834.808zM5.488 6.8L10 10.423 14.512 6.8z"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list-item">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                  <g fill="none" fill-rule="evenodd">
+                    <path class="social-hover" fill="#000" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
+                    />
+                    <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
+                    <path fill="#FFF" d="M10.726 14.4V10h1.301l.173-1.517h-1.474l.002-.759c0-.395.04-.607.649-.607h.814V5.6h-1.302c-1.564 0-2.114.736-2.114 1.973v.91H7.8V10h.975v4.4h1.95z"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list-item">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                  <g fill="none" fill-rule="evenodd">
+                    <path class="social-hover" fill="#000" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
+                    />
+                    <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
+                    <path fill="#FFF" d="M5.6 8.047v5.816h1.884V8.047zM6.666 5.2C6.02 5.2 5.6 5.634 5.6 6.205c0 .558.409 1.005 1.041 1.005h.012c.657 0 1.067-.447 1.067-1.005-.013-.57-.41-1.005-1.054-1.005zM12.23 8.047c-1 0-1.447.565-1.697.96v-.823H8.648c.025.546 0 5.816 0 5.816h1.885v-3.248c0-.174.012-.347.062-.472.136-.347.446-.707.966-.707.682 0 .955.534.955 1.315V14H14.4v-3.335c0-1.786-.93-2.618-2.17-2.618z"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="section-name animated fadeInRightBig">
+          <h2 class="section-name-item active">Главная</h2>
+          <h2 class="section-name-item">Преймущества</h2>
+          <h2 class="section-name-item">Команда</h2>
+          <h2 class="section-name-item">Контакты</h2>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <section class="section first">
+        <div class="container">
+          <div class="container-bg">
+            <div class="container-bg-col"></div>
+            <div class="container-bg-col"></div>
+            <div class="container-bg-col"></div>
+          </div>
+          <div class="bg-triangles animated rollIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="352" height="176" viewBox="0 0 352 176">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#F48145" />
+                  <stop offset="100%" stop-color="#E54A21" />
+                </linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd" stroke-width="50">
+                <path stroke="#6A44E5" d="M146.699-27.216l178.723 56.128a1 1 0 0 1 .42 1.65l-115.15 119.24a1 1 0 0 1-1.662-.362L146.699-27.216z"
+                />
+                <path stroke="url(#a)" d="M93.337 11.837l83.777 167.553a1 1 0 0 1-.895 1.447H10.455a1 1 0 0 1-.894-1.447L93.337 11.837z"
+                  transform="rotate(6 944.907 281.31)" />
+              </g>
+            </svg>
+          </div>
+          <div class="section-inner">
+            <div class="slider">
+              <div class="slider-item mobile show animated fadeInLeft">
+                <div class="slider-item-square" id="slide1">
+                  <div class="square-img" data-depth="0.2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="361" height="359" viewBox="0 0 361 359" class="triangle">
+                      <path fill="none" fill-rule="evenodd" stroke="#F4F96F" stroke-width="70" d="M180.5 77.916L56.772 324h247.456L180.5 77.916z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="square-img" data-depth="0.5">
+                    <img class="iphone" src="img/iphone.png" alt="iphone">
+                  </div>
+                  <div class="square-img" data-depth="0.8">
+                    <img class="astronaut" src="img/astronaut.png" alt="astronaut">
+                  </div>
+                  <div class="square-arrows">
+                    <div class="arrows-inner">
+                      <div class="square-arrows-item prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
                             <g fill="none" fill-rule="evenodd" stroke="#000" transform="matrix(0 -1 -1 0 27 27)">
                                 <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5"/>
@@ -154,105 +277,41 @@
                         </g>
                     </svg>
                 </div>
-                <div class="section-inner">
-                    <div class="slider">
-                        <div class="slider-item mobile show animated fadeInLeftBig">
-                            <div class="slider-item-square" id="scene">
-                                <div class="square-img" data-depth="0.2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="361" height="359"
-                                         viewBox="0 0 361 359" class="triangle">
-                                        <path fill="none" fill-rule="evenodd" stroke="#F4F96F" stroke-width="70"
-                                              d="M180.5 77.916L56.772 324h247.456L180.5 77.916z"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="square-img" data-depth="0.5">
-                                    <img class="iphone" src="img/iphone.png" alt="iphone">
-                                </div>
-                                <div class="square-img" data-depth="0.8">
-                                    <img class="astronaut" src="img/astronaut.png" alt="astronaut">
-                                </div>
-                                <div class="square-arrows">
-                                    <div class="arrows-inner">
-                                        <div class="square-arrows-item prev">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
-                                                 viewBox="0 0 26 26">
-                                                <g fill="none" fill-rule="evenodd" stroke="#000"
-                                                   transform="matrix(0 -1 -1 0 27 27)">
-                                                    <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5"/>
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                          stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5"/>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                        <div class="square-arrows-item next">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
-                                                 viewBox="0 0 26 26">
-                                                <g fill="none" fill-rule="evenodd" stroke="#000"
-                                                   transform="rotate(90 14 13)">
-                                                    <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5"/>
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                          stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5"/>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-item-title">
-                                <h2 class="title">
-                                    <span class="heavy">Мобильная</span> разработка</h2>
-                                <span class="subtitle">Приложения любого масштаба</span>
-                            </div>
-                            <div class="slider-item-list">
-                                <ul class="list">
-                                    <li class="list-item">Android приложения</li>
-                                    <li class="list-item">iOS приложения</li>
-                                    <li class="list-item">Windows Mobile</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="slider-item web">
-                            <div class="slider-item-square">
-                                <img class="square-img mac" src="img/mac.png" alt="mac" data-depth="0.2">
-                                <img class="square-img cofe" src="img/cofe.png" alt="cofe" data-depth="0.6">
-                            </div>
-                            <div class="slider-item-title">
-                                <h2 class="title">
-                                    <span class="heavy">Разработка</span> сайтов</h2>
-                                <span class="subtitle">Высокого качества</span>
-                            </div>
-                            <div class="slider-item-list">
-                                <ul class="list">
-                                    <li class="list-item">Landing page</li>
-                                    <li class="list-item">Сайт визитка</li>
-                                    <li class="list-item">Корпоративный сайт</li>
-                                    <li class="list-item">Сайт каталог</li>
-                                    <li class="list-item">Интернет магазин</li>
-                                    <li class="list-item">Уникальный сайт</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="slider-item lead">
-                            <div class="slider-item-square"></div>
-                            <div class="slider-item-title">
-                                <h2 class="title">
-                                    <span class="heavy">Лидогенерация</span>
-                                </h2>
-                                <span class="subtitle">Продвижение в интернете</span>
-                            </div>
-                            <div class="slider-item-list">
-                                <ul class="list">
-                                    <li class="list-item">Интеренет реклама</li>
-                                    <li class="list-item">Полная оптимизация</li>
-                                    <li class="list-item">SMM</li>
-                                    <li class="list-item">SEM</li>
-                                    <li class="list-item">SEO</li>
-                                    <li class="list-item">Media Buying</li>
-                                </ul>
-                            </div>
-                        </div>
+              </div>
+              <div class="slider-item web">
+                <div class="slider-item-square" id="slide2">
+                  <div class="square-img" data-depth="0.2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="361" height="359" viewBox="0 0 361 359" class="triangle">
+                      <path fill="none" fill-rule="evenodd" stroke="#F4F96F" stroke-width="70" d="M180.5 77.916L56.772 324h247.456L180.5 77.916z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="square-img" data-depth="0.5">
+                    <img class="mac" src="img/mac.png" alt="mac">
+                  </div>
+                  <div class="square-img" data-depth="0.5">
+                    <img class="cofe" src="img/cofe.png" alt="cofe">
+                  </div>
+                  <div class="square-arrows">
+                    <div class="arrows-inner">
+                      <div class="square-arrows-item prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="matrix(0 -1 -1 0 27 27)">
+                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="square-arrows-item next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="rotate(90 14 13)">
+                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
+                  </div>
                 </div>
             </div>
         </section>
@@ -407,6 +466,89 @@
                         </div>
                     </div>
                 </div>
+              </div>
+      </section>
+      <section class="second"></section>
+      <section class="third"></section>
+      <section class="fourth">
+        <div class="bg"></div>
+        <div class="container">
+          <div class="container-bg">
+            <div class="container-bg-col"></div>
+            <div class="container-bg-col"></div>
+            <div class="container-bg-col"></div>
+          </div>
+          <div class="bg-hand"></div>
+          <div class="map-and-contacts">
+            <div class="map" id="map">
+
+            </div>
+            <div class="contacts">
+              <div class="address">
+                <h6>Киев, Украина</h6>
+                <p>Quantum Projects | Digital-агентство</p>
+                <p>Веб-студия создание и разработка сайтов</p>
+              </div>
+              <div class="phone">
+                <h6>Телефон:</h6>
+                <p>+38 (093) 971 63 36</p>
+              </div>
+              <div class="skype">
+                <h6>Skype:</h6>
+                <p>quantum</p>
+              </div>
+              <div class="mail">
+                <h6>Email:</h6>
+                <p>info@quantum_projects.net</p>
+              </div>
+              <div class="social">
+                <a href="">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="none" fill-rule="evenodd" class="svg">
+                      <path fill="#000" fill-rule="nonzero" class="svg" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10s4.477 10 10 10 10-4.477 10-10z"
+                      />
+                      <path stroke="#FFF" d="M18.8 10a8.8 8.8 0 1 0-17.6 0 8.8 8.8 0 0 0 17.6 0z" />
+                      <path fill="#FFF" d="M10.176 5.59c-.252 0-.5.021-.74.061A2.702 2.702 0 0 0 7.94 5.2C6.426 5.2 5.2 6.445 5.2 7.98c0 .559.162 1.078.441 1.514a4.68 4.68 0 0 0-.057.73c0 2.56 2.055 4.635 4.592 4.635.286 0 .565-.028.836-.078.42.265.916.419 1.448.419 1.514 0 2.74-1.245 2.74-2.78 0-.58-.175-1.12-.476-1.567.028-.206.044-.415.044-.629 0-2.559-2.056-4.634-4.592-4.634z"
+                      />
+                      <path fill="#000" class="svg" d="M7.987 11.477c.57-.038.911.659 1.215.852.304.194 1.459.634 2.069-.077.664-.775-.442-1.175-1.253-1.296-1.157-.175-2.619-.814-2.505-2.072.114-1.257 1.048-1.902 2.03-1.993 1.253-.116 2.069.193 2.714.755.746.648.342 1.373-.133 1.431-.474.058-1.005-1.066-2.049-1.083-1.076-.017-1.803 1.141-.475 1.47 1.329.33 2.752.465 3.264 1.704.513 1.239-.796 2.554-2.258 2.632-1.46.077-2.144-.252-2.77-.851-.7-.67-.419-1.433.151-1.472z"
+                      />
+                    </g>
+                  </svg>
+                </a>
+                <a href="">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="none" fill-rule="evenodd" class="svg">
+                      <path fill="#000" fill-rule="nonzero" class="svg" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0z"
+                      />
+                      <path stroke="#FFF" d="M10 1.2a8.8 8.8 0 1 0 0 17.6 8.8 8.8 0 0 0 0-17.6z" />
+                      <path fill="#FFF" d="M14.8 12.786V6.8l-3.495 3.386zM5.2 12.786l3.495-2.6L5.2 6.8zM9.166 10.642L5.2 13.2h9.6l-3.966-2.558-.834.808zM5.488 6.8L10 10.423 14.512 6.8z"
+                      />
+                    </g>
+                  </svg>
+                </a>
+                <a href="">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="none" fill-rule="evenodd" class="svg">
+                      <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
+                      />
+                      <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
+                      <path fill="#FFF" d="M10.726 14.4V10h1.301l.173-1.517h-1.474l.002-.759c0-.395.04-.607.649-.607h.814V5.6h-1.302c-1.564 0-2.114.736-2.114 1.973v.91H7.8V10h.975v4.4h1.95z"
+                      />
+                    </g>
+                  </svg>
+                </a>
+                <a href="">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="none" fill-rule="evenodd" class="svg">
+                      <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
+                      />
+                      <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
+                      <path fill="#FFF" d="M5.6 8.047v5.816h1.884V8.047zM6.666 5.2C6.02 5.2 5.6 5.634 5.6 6.205c0 .558.409 1.005 1.041 1.005h.012c.657 0 1.067-.447 1.067-1.005-.013-.57-.41-1.005-1.054-1.005zM12.23 8.047c-1 0-1.447.565-1.697.96v-.823H8.648c.025.546 0 5.816 0 5.816h1.885v-3.248c0-.174.012-.347.062-.472.136-.347.446-.707.966-.707.682 0 .955.534.955 1.315V14H14.4v-3.335c0-1.786-.93-2.618-2.17-2.618z"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </div>
             </div>
             <div class="footer">
                 <div class="container">
