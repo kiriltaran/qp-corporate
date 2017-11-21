@@ -10,5 +10,8 @@ $(function () {
 	var parallaxInstance = new Parallax(scene3);
 
     var scene4 = document.getElementById('web');
+	var parallaxInstance = new Parallax(scene4);
+	
+	var scene4 = document.getElementById('mobile');
     var parallaxInstance = new Parallax(scene4);
 });
