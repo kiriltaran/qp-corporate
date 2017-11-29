@@ -1,11 +1,16 @@
 .menu-wrapper
-  position: relative
+  opacity: 0
+  position: fixed
   width: 100%
   height: 100vh
   background-color: #000
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity .3s ease-in-out
+.show-menu
+  opacity: 1
+  z-index: 999
   .bg-img
     background-image: url('../img/black-friday.png')
     position: absolute
