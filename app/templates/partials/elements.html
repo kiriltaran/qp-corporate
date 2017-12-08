@@ -2,8 +2,8 @@
   <div class="elements-inner">
     <header class="header">
       <a href="/" class="logo"></a>
-      <div id="menu-btn" class="menu-btn">
-        <div id="burger" class="burger show">
+      <div class="menu-btn toggleMenu">
+        <div class="burger show">
           <div class="burger-line top"></div>
           <div class="mid">
             <div class="burger-line mid-line"></div>
@@ -11,21 +11,17 @@
           </div>
           <div class="burger-line bot"></div>
         </div>
-        <div id="close" class="close">
-          <div class="cross">
-              <div class="cross-line top"></div>
-              <div class="cross-line bot"></div>
-          </div>
-        </div>
       </div>
     </header>
     <nav class="nav animated fadeInLeft">
-      <ul class="nav-list">
-        <li class="nav-list-item active">01</li>
-        <li class="nav-list-item">02</li>
-        <li class="nav-list-item">03</li>
-        <li class="nav-list-item">04</li>
-      </ul>
+      <div id="nav-list" class="nav-list">
+        <a class="nav-list-item" href="#first" data-menuanchor="first">01</a>
+        <a class="nav-list-item" href="#features" data-menuanchor="features">02</a>
+        <a class="nav-list-item" href="#web" data-menuanchor="web">03</a>
+        <a class="nav-list-item" href="#mobile" data-menuanchor="mobile">04</a>
+        <a class="nav-list-item" href="#lead" data-menuanchor="lead">05</a>
+        <a class="nav-list-item" href="#last" data-menuanchor="last">06</a>
+      </div>
       <div class="nav-arrows">
         <div class="nav-arrows-item prev">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
@@ -103,11 +99,11 @@
         </li>
       </ul>
     </div>
-    <div class="section-name animated fadeInRightBig">
+    <!-- <div class="section-name animated fadeInRightBig">
       <h2 class="section-name-item active">Главная</h2>
       <h2 class="section-name-item">Преймущества</h2>
       <h2 class="section-name-item">Команда</h2>
       <h2 class="section-name-item">Контакты</h2>
-    </div>
+    </div> -->
   </div>
 </div>
