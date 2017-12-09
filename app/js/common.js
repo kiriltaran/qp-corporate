@@ -1,39 +1,56 @@
-$(function () {
-	// Custom JS
-	$(document).ready(function () {
-		$('#fullpage').fullpage({
-			menu: '#nav-list',
-			anchors: ['first','features', 'web', 'mobile', 'lead', 'last'],
-		});
-	});
+$(function() {
+  var navAnchors = ['first', 'features', 'web', 'mobile', 'lead', 'last'];
 
+  var slide1 = document.getElementById('slide1');
+  var parallaxInstance = new Parallax(slide1);
 
+  var slide2 = document.getElementById('slide2');
+  var parallaxInstance = new Parallax(slide2);
 
-	var slide1 = document.getElementById('slide1');
-	var parallaxInstance = new Parallax(slide1);
+  var scene3 = document.getElementById('slide3');
+  var parallaxInstance = new Parallax(scene3);
 
-	var slide2 = document.getElementById('slide2');
-	var parallaxInstance = new Parallax(slide2);
+  var scene4 = document.getElementById('web-parallax');
+  var parallaxInstance = new Parallax(scene4);
 
-	var scene3 = document.getElementById('slide3');
-	var parallaxInstance = new Parallax(scene3);
+  var scene4 = document.getElementById('mobile-parallax');
+  var parallaxInstance = new Parallax(scene4);
 
-	var scene4 = document.getElementById('web-parallax');
-	var parallaxInstance = new Parallax(scene4);
+  $('#fullpage').fullpage({
+    menu: '#nav-list',
+    anchors: navAnchors,
+    controlArrows: false,
+  });
 
-	var scene4 = document.getElementById('mobile-parallax');
-	var parallaxInstance = new Parallax(scene4);
+  $('.toggleMenu').click(function() {
+    $('#menu').toggleClass('show-menu');
+    $('.main').toggleClass('blur');
+    $('.burger').toggleClass('show');
+  });
 
-	$(window).scroll(function () {});
+  $('.menu-item').click(function() {
+    $('#menu').toggleClass('show-menu');
+    $('.main').toggleClass('blur');
+    $('.burger').toggleClass('show');
+  });
 
-	$('.toggleMenu').click(function(){
-		$('#menu').toggleClass('show-menu');
-		$('.main').toggleClass('blur');
-	})
+  $('#prev').click(function() {
+    $.fn.fullpage.moveSectionUp();
+  });
 
-	$('.menu-item').click(function(){
-		$('#menu').toggleClass('show-menu');
-		$('.main').toggleClass('blur');
-	})
+  $('#next').click(function() {
+    $.fn.fullpage.moveSectionDown();
+  });
 
+  setInterval(function() {
+    $.fn.fullpage.moveSlideRight();
+  }, 15000);
+
+  $('.prev-slide').click(function() {
+    $.fn.fullpage.moveSlideLeft();
+  });
+
+  $('.next-slide').click(function() {
+    $.fn.fullpage.moveSlideRight();
+  });
 });
