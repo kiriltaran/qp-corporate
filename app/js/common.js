@@ -19,6 +19,7 @@ $(function() {
   $('#fullpage').fullpage({
     menu: '#nav-list',
     anchors: navAnchors,
+    controlArrows: false,
   });
 
   $('.toggleMenu').click(function() {
@@ -30,6 +31,7 @@ $(function() {
   $('.menu-item').click(function() {
     $('#menu').toggleClass('show-menu');
     $('.main').toggleClass('blur');
+    $('.burger').toggleClass('show');
   });
 
   $('#prev').click(function() {
@@ -38,5 +40,17 @@ $(function() {
 
   $('#next').click(function() {
     $.fn.fullpage.moveSectionDown();
+  });
+
+  setInterval(function() {
+    $.fn.fullpage.moveSlideRight();
+  }, 15000);
+
+  $('.prev-slide').click(function() {
+    $.fn.fullpage.moveSlideLeft();
+  });
+
+  $('.next-slide').click(function() {
+    $.fn.fullpage.moveSlideRight();
   });
 });
