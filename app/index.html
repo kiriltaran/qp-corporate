@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="../libs/fullpage.js/dist/jquery.fullpage.min.css">
   <link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -27,15 +28,19 @@
   <div class="wrapper">
     <div id="menu" class="menu-wrapper">
       <div class="bg-img"></div>
-      <div class="exit-btn"></div>
+      <div id="close" class="close toggleMenu">
+        <div class="cross">
+          <div class="cross-line top"></div>
+          <div class="cross-line bot"></div>
+        </div>
+      </div>
       <nav class="menu">
-        <ul class="menu-list">
-          <li class="menu-list-item">Разработка сайтов</li>
-          <li class="menu-list-item">Лидогенерация</li>
-          <li class="menu-list-item">Мобильная разработка</li>
-          <li class="menu-list-item">О нас</li>
-          <li class="menu-list-item">Комманда</li>
-          <li class="menu-list-item">Контакты</li>
+          <a class="menu-item" href="#first">Разработка сайтов</a>
+          <a class="menu-item" href="#features">Лидогенерация</a>
+          <a class="menu-item" href="#web">Мобильная разработка</a>
+          <a class="menu-item" href="#mobile">О нас</a>
+          <a class="menu-item" href="#lead">Комманда</a>
+          <a class="menu-item" href="#last">Контакты</a>
         </ul>
       </nav>
     </div>
@@ -43,8 +48,8 @@
       <div class="elements-inner">
         <header class="header">
           <a href="/" class="logo"></a>
-          <div id="menu-btn" class="menu-btn">
-            <div id="burger" class="burger show">
+          <div class="menu-btn toggleMenu">
+            <div class="burger show">
               <div class="burger-line top"></div>
               <div class="mid">
                 <div class="burger-line mid-line"></div>
@@ -52,21 +57,17 @@
               </div>
               <div class="burger-line bot"></div>
             </div>
-            <div id="close" class="close">
-              <div class="cross">
-                  <div class="cross-line top"></div>
-                  <div class="cross-line bot"></div>
-              </div>
-            </div>
           </div>
         </header>
         <nav class="nav animated fadeInLeft">
-          <ul class="nav-list">
-            <li class="nav-list-item active">01</li>
-            <li class="nav-list-item">02</li>
-            <li class="nav-list-item">03</li>
-            <li class="nav-list-item">04</li>
-          </ul>
+          <div id="nav-list" class="nav-list">
+            <a class="nav-list-item" href="#first" data-menuanchor="first">01</a>
+            <a class="nav-list-item" href="#features" data-menuanchor="features">02</a>
+            <a class="nav-list-item" href="#web" data-menuanchor="web">03</a>
+            <a class="nav-list-item" href="#mobile" data-menuanchor="mobile">04</a>
+            <a class="nav-list-item" href="#lead" data-menuanchor="lead">05</a>
+            <a class="nav-list-item" href="#last" data-menuanchor="last">06</a>
+          </div>
           <div class="nav-arrows">
             <div class="nav-arrows-item prev">
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
@@ -144,29 +145,29 @@
             </li>
           </ul>
         </div>
-        <div class="section-name animated fadeInRightBig">
+        <!-- <div class="section-name animated fadeInRightBig">
           <h2 class="section-name-item active">Главная</h2>
           <h2 class="section-name-item">Преймущества</h2>
           <h2 class="section-name-item">Команда</h2>
           <h2 class="section-name-item">Контакты</h2>
-        </div>
+        </div> -->
       </div>
     </div>
-    <main class="main">
+    <main class="main" id="fullpage">
       
-      <section class="first">
-        <div class="container">
-          <div class="container-bg">
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-          </div>
-          <div class="bg-triangles">
-            <img src="../../img/triangles.png" alt="triangles">
-          </div>
-          <div class="section-inner">
+      <section class="section first">
+        <div class="section-inner">
+          <div class="container">
+            <div class="container-bg">
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+            </div>
+            <div class="bg-triangles">
+              <img src="../../img/triangles.png" alt="triangles">
+            </div>
             <div class="slider">
-              <div class="slider-item mobile show">
+              <div class="slider-item mobile">
                 <div class="slider-item-square" id="slide1">
                   <div class="square-img" data-depth="0.2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="361" height="359" viewBox="0 0 361 359" class="triangle">
@@ -179,26 +180,6 @@
                   </div>
                   <div class="square-img" data-depth="0.8">
                     <img class="astronaut" src="img/astronaut.png" alt="astronaut">
-                  </div>
-                  <div class="square-arrows">
-                    <div class="arrows-inner">
-                      <div class="square-arrows-item prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="matrix(0 -1 -1 0 27 27)">
-                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
-                          </g>
-                        </svg>
-                      </div>
-                      <div class="square-arrows-item next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="rotate(90 14 13)">
-                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
                   </div>
                 </div>
                 <div class="slider-item-title">
@@ -214,7 +195,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="slider-item web">
+              <div class="slider-item web show">
                 <div class="slider-item-square" id="slide2">
                   <div class="square-img" data-depth="0.2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="310" height="310" viewBox="0 0 310 310" class="circle">
@@ -227,26 +208,6 @@
                   </div>
                   <div class="square-img" data-depth="0.5">
                     <img class="cofe" src="img/cofe.png" alt="cofe">
-                  </div>
-                  <div class="square-arrows">
-                    <div class="arrows-inner">
-                      <div class="square-arrows-item prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="matrix(0 -1 -1 0 27 27)">
-                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
-                          </g>
-                        </svg>
-                      </div>
-                      <div class="square-arrows-item next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="rotate(90 14 13)">
-                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
                   </div>
                 </div>
                 <div class="slider-item-title">
@@ -291,26 +252,6 @@
                   <div class="square-img" data-depth="0.3">
                     <img class="lego" src="../../img/lego.png" alt="lego">
                   </div>
-                  <div class="square-arrows">
-                    <div class="arrows-inner">
-                      <div class="square-arrows-item prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="matrix(0 -1 -1 0 27 27)">
-                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
-                          </g>
-                        </svg>
-                      </div>
-                      <div class="square-arrows-item next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-                          <g fill="none" fill-rule="evenodd" stroke="#000" transform="rotate(90 14 13)">
-                            <circle cx="14.19" cy="14.223" r="12.5" stroke-width=".5" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".88" d="M12.088 19.883l6.71-4.992-6.703-5" />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div class="slider-item-title">
                   <h2 class="title">
@@ -333,14 +274,14 @@
           </div>
         </div>
       </section>
-      <section class="second">
-        <div class="container">
-          <div class="container-bg">
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-          </div>
-          <div class="section-inner">
+      <section class="section second">
+        <div class="section-inner">
+          <div class="container">
+            <div class="container-bg">
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+            </div>
             <div class="features">
               <div class="features-row">
                 <div class="features-item">
@@ -523,262 +464,274 @@
           </div>
         </div>
       </section>
-      <section class="third"></section>
-      <section class="fourth">
-        <div class="bg"></div>
-        <div class="container">
-          <div class="container-bg">
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-          </div>
-          <div class="bg-hand"></div>
-          <div class="map-and-contacts">
-            <div class="map" id="map">
-      
+      <section class="section web">
+        <div class="section-inner">
+          <div class="container">
+            <div class="container-bg">
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
             </div>
-            <div class="contacts">
-              <div class="address">
-                <h6>Киев, Украина</h6>
-                <p>Quantum Projects | Digital-агентство</p>
-                <p>Веб-студия создание и разработка сайтов</p>
+            <div class="web-content">
+              <div class="lead-header">
+                <div class="text">
+                  <h2>Разработка профессиональных сайтов и web-интеграции</h2>
+                  <p>Что, по вашему мнению, самое главное при разработке любого сайта? Красивый и удобный интерфейс? Многофункциональность?
+                    Мощная современная платформа cms с широкими возможностями интеграции? Продуманное техническое задание и его
+                    детальная реализация? Точное соблюдение разработчиками сроков? Или, может, привлекательная стоимость, в конце
+                    концов?.. Все это, безусловно, важно. Однако веб-студия Quantum Projects считает: все это вторично. Да-да,
+                    именно так! А первичным является... комплексный подход, который включает все перечисленное – и даже чуточку
+                    больше. Именно так можно разработать сайт, который приносит результат – а не это ли, по вашему мнению, самое
+                    главное для вашего бизнеса?</p>
+                </div>
+                <div class="header-img">
+                  <div class="header-img-container" id="web-parallax">
+                    <div class="container-img" data-depth="0.5">
+                      <img class="img1" src="../../img/group.png" alt="img">
+                    </div>
+                    <div class="container-img" data-depth="0.5">
+                      <img class="img2" src="../../img/icon-3.png" alt="img">
+                    </div>
+                    <div class="container-img" data-depth="0.4">
+                      <img class="img3" src="../../img/icon-4.png" alt="img">
+                    </div>
+                    <div class="container-img" data-depth="0.4">
+                      <img class="img4" src="../../img/icon-1.png" alt="img">
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="phone">
-                <h6>Телефон:</h6>
-                <p>+38 (093) 971 63 36</p>
-              </div>
-              <div class="skype">
-                <h6>Skype:</h6>
-                <p>quantum</p>
-              </div>
-              <div class="mail">
-                <h6>Email:</h6>
-                <p>info@quantum_projects.net</p>
-              </div>
-              <div class="social">
-                <a href="">
-                  <svg width="20" height="20" viewBox="0 0 20 20">
-                    <g fill="none" fill-rule="evenodd" class="svg">
-                      <path fill="#000" fill-rule="nonzero" class="svg" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10s4.477 10 10 10 10-4.477 10-10z"
-                      />
-                      <path stroke="#FFF" d="M18.8 10a8.8 8.8 0 1 0-17.6 0 8.8 8.8 0 0 0 17.6 0z" />
-                      <path fill="#FFF" d="M10.176 5.59c-.252 0-.5.021-.74.061A2.702 2.702 0 0 0 7.94 5.2C6.426 5.2 5.2 6.445 5.2 7.98c0 .559.162 1.078.441 1.514a4.68 4.68 0 0 0-.057.73c0 2.56 2.055 4.635 4.592 4.635.286 0 .565-.028.836-.078.42.265.916.419 1.448.419 1.514 0 2.74-1.245 2.74-2.78 0-.58-.175-1.12-.476-1.567.028-.206.044-.415.044-.629 0-2.559-2.056-4.634-4.592-4.634z"
-                      />
-                      <path fill="#000" class="svg" d="M7.987 11.477c.57-.038.911.659 1.215.852.304.194 1.459.634 2.069-.077.664-.775-.442-1.175-1.253-1.296-1.157-.175-2.619-.814-2.505-2.072.114-1.257 1.048-1.902 2.03-1.993 1.253-.116 2.069.193 2.714.755.746.648.342 1.373-.133 1.431-.474.058-1.005-1.066-2.049-1.083-1.076-.017-1.803 1.141-.475 1.47 1.329.33 2.752.465 3.264 1.704.513 1.239-.796 2.554-2.258 2.632-1.46.077-2.144-.252-2.77-.851-.7-.67-.419-1.433.151-1.472z"
-                      />
-                    </g>
-                  </svg></a>
-                <a href="#">
-                  <svg width="20" height="20" viewBox="0 0 20 20">
-                    <g fill="none" fill-rule="evenodd" class="svg">
-                      <path fill="#000" fill-rule="nonzero" class="svg" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0z"
-                      />
-                      <path stroke="#FFF" d="M10 1.2a8.8 8.8 0 1 0 0 17.6 8.8 8.8 0 0 0 0-17.6z" />
-                      <path fill="#FFF" d="M14.8 12.786V6.8l-3.495 3.386zM5.2 12.786l3.495-2.6L5.2 6.8zM9.166 10.642L5.2 13.2h9.6l-3.966-2.558-.834.808zM5.488 6.8L10 10.423 14.512 6.8z"
-                      />
-                    </g>
-                  </svg></a>
-                <a href="#">
-                  <svg width="20" height="20" viewBox="0 0 20 20">
-                    <g fill="none" fill-rule="evenodd" class="svg">
-                      <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
-                      />
-                      <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
-                      <path fill="#FFF" d="M10.726 14.4V10h1.301l.173-1.517h-1.474l.002-.759c0-.395.04-.607.649-.607h.814V5.6h-1.302c-1.564 0-2.114.736-2.114 1.973v.91H7.8V10h.975v4.4h1.95z"
-                      />
-                    </g>
-                  </svg></a>
-                <a href="#">
-                  <svg width="20" height="20" viewBox="0 0 20 20">
-                    <g fill="none" fill-rule="evenodd" class="svg">
-                      <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
-                      />
-                      <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
-                      <path fill="#FFF" d="M5.6 8.047v5.816h1.884V8.047zM6.666 5.2C6.02 5.2 5.6 5.634 5.6 6.205c0 .558.409 1.005 1.041 1.005h.012c.657 0 1.067-.447 1.067-1.005-.013-.57-.41-1.005-1.054-1.005zM12.23 8.047c-1 0-1.447.565-1.697.96v-.823H8.648c.025.546 0 5.816 0 5.816h1.885v-3.248c0-.174.012-.347.062-.472.136-.347.446-.707.966-.707.682 0 .955.534.955 1.315V14H14.4v-3.335c0-1.786-.93-2.618-2.17-2.618z"
-                      />
-                    </g>
-                  </svg></a>
+              <div class="lead-list">
+                <div class="first-list">
+                  <div class="column">
+                    <h3>Создание корпоративного сайта</h3>
+                    <p>Не только представить необходимую информацию о вашей компании, фирмы, а воплотить образ, стиль и подход к бизнесу
+                      в целом – это ключевая задача, которую решает разработка корпоративных сайтов от веб-студии Quantum Projects.
+                      Благодаря этому вы наладите прочный контакт с целевой аудиторией и завоюете ее доверие.</p>
+                  </div>
+                  <div class="column">
+                    <h3>Создание интернет-магазина</h3>
+                    <p>Продажи, продажи и еще раз продажи – если их нет, разработка вашего интернет-магазина не имела никакого смысла.
+                      Но чтобы такой сайт магазин продавал, необходимо учесть массу факторов! Потому интернет-магазин мы делаем
+                      для вашей фирмы и привлекательным, и удобным в плане юзабилити, и технологичным – продающим, одним словом.</p>
+                  </div>
+                  <div class="column">
+                    <h3>Разработка порталов</h3>
+                    <p>Размер имеет значение – уж при разработке столь огромных ресурсов как интернет-портал так точно. Потому что
+                      необходимо грамотно выстроить всю архитектуру корпоративного сайта портала, без чего невозможна удобная работа
+                      с ним. А значит, именно на этом мы и сделаем основной акцент: и вы, и ваши посетители оценят комфорт такого
+                      портала.</p>
+                  </div>
+                </div>
+                <div class="second-list">
+                  <div class="column">
+                    <h3>Разработка сайта банка</h3>
+                    <p>Лучшими характеристиками банка являются надежность и стабильность. И именно эти характеристики должны быть
+                      у сайта финансовой организации! Не важно, речь об информационном разделе или о системе интернет банкинга
+                      – наши разработчики предусмотрят все, чтобы ваш корпоративный портал в любой ситуации работал без сбоев.</p>
+                  </div>
+                  <div class="column">
+                    <h3>Разработка B2B / B2C / CMS / HR</h3>
+                    <p>Оригинальные наработки, накопленные за 14 лет работы, позволяют веб-студии Quantum Projects заниматься разработкой
+                      не только сайтов, но и специализированных технологических решений. Системы CMS для создания любого сайта,
+                      разработка интернет банкинга, HR-системы для работы с персоналом, комплексы для B2B и B2C – у нас вы найдете
+                      многое.</p>
+                  </div>
+                  <div class="column">
+                    <h3>Создание landing Page</h3>
+                    <p>Одна страница, но максимум эффективности – в случае с таким типом сайтов как лэндинг пэйдж описанный принцип
+                      должен быть ведущим в разработке. У нашей веб-студии все именно так. Поэтому при заказе подобного сайта,
+                      лэндинг пэйдж, у нас будьте уверены: он продемонстрирует максимально возможные конверсии.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="form">
-            <div class="title">
-              <h2>Обратная связь:</h2>
-            </div>
-            <form>
-              <div class="inputs">
-                <input type="email" placeholder="E-mail">
-                <input type="text" placeholder="Ваше имя">
-              </div>
-              <div class="textarea">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-              </div>
-              <div class="button">
-                <button>Отправить запрос</button>
-              </div>
-            </form>
           </div>
         </div>
       </section>
-      <section class="web">
+      <section class="section mobile">
+        <div class="section-inner">
           <div class="container">
-              <div class="container-bg">
-                  <div class="container-bg-col"></div>
-                  <div class="container-bg-col"></div>
-                  <div class="container-bg-col"></div>
-              </div>
-              <div class="web-content">
-                  <div class="lead-header">
-                      <div class="text">
-                          <h2>Разработка профессиональных сайтов и web-интеграции</h2>
-                          <p>Что, по вашему мнению, самое главное при разработке любого сайта? Красивый и удобный интерфейс? Многофункциональность?
-                              Мощная современная платформа cms с широкими возможностями интеграции? Продуманное техническое задание
-                              и его детальная реализация? Точное соблюдение разработчиками сроков? Или, может, привлекательная
-                              стоимость, в конце концов?.. Все это, безусловно, важно. Однако веб-студия Quantum Projects считает:
-                              все это вторично. Да-да, именно так! А первичным является... комплексный подход, который включает
-                              все перечисленное – и даже чуточку больше. Именно так можно разработать сайт, который приносит результат
-                              – а не это ли, по вашему мнению, самое главное для вашего бизнеса?</p>
-                      </div>
-                      <div class="header-img">
-                          <div class="header-img-container" id="web">
-                              <div class="container-img" data-depth="0.5">
-                                  <img class="img1" src="../../img/group.png" alt="img">
-                              </div>
-                              <div class="container-img" data-depth="0.2">
-                                  <img class="img2" src="../../img/icon-3.png" alt="img">
-                              </div>
-                              <div class="container-img" data-depth="0.4">
-                                  <img class="img3" src="../../img/icon-4.png" alt="img">
-                              </div>
-                              <div class="container-img" data-depth="0.3">
-                                  <img class="img4" src="../../img/icon-1.png" alt="img">
-                              </div>
-                          </div>
-                      </div>
+            <div class="container-bg">
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+            </div>
+            <div class="mobile-content">
+              <div class="mobile-header">
+                <div class="text">
+                  <h2>Разработка мобильных приложений любого масштаба</h2>
+                  <p>В 21-м веке человечество перешло в новую эру технологического развития. Мобильный телефон стал не только комуникационным
+                    устройством, но и повседневным инструментом для решения важных задач. Теперь что бы приобрести товар или услугу
+                    не надо идти в магазин или салон, достаточно достать телефон из своего кармана. Для отслеживания бизнес процессов
+                    не обязательно вытягивать ноутбук из сумки думая о том, где поключиться к WI-FI сети. Мобильные устройства
+                    обрели новый смысл и продолжают свое развитие с геометричкой прогрессией. Quantum Projects верит в то, что
+                    человечество находиться на старте еще одной технологической революции и всячески способствует развитию этой
+                    идеи. Мы помогаем реализовывать смелые идеи наших клиентов и самое главное не стесняемся говорить Вам, решит
+                    ли эта идея бизнес задачу. Вся команда компании Quantum Projects будет рада сотруднечеству. Добро пожаловать!</p>
+                </div>
+                <div class="header-img">
+                  <div class="header-img-container" id="mobile-parallax">
+                    <div class="container-img" data-depth="0.2">
+                      <img class="img1" src="../../img/mobile2.png" alt="img">
+                    </div>
+                    <div class="container-img" data-depth="0.4">
+                      <img class="img2" src="../../img/mobile1.png" alt="img">
+                    </div>
                   </div>
-                  <div class="lead-list">
-                      <div class="first-list">
-                          <div class="column">
-                              <h3>Создание корпоративного сайта</h3>
-                              <p>Не только представить необходимую информацию о вашей компании, фирмы, а воплотить образ, стиль и
-                                  подход к бизнесу в целом – это ключевая задача, которую решает разработка корпоративных сайтов
-                                  от веб-студии Quantum Projects. Благодаря этому вы наладите прочный контакт с целевой аудиторией
-                                  и завоюете ее доверие.</p>
-                          </div>
-                          <div class="column">
-                              <h3>Создание интернет-магазина</h3>
-                              <p>Продажи, продажи и еще раз продажи – если их нет, разработка вашего интернет-магазина не имела никакого
-                                  смысла. Но чтобы такой сайт магазин продавал, необходимо учесть массу факторов! Потому интернет-магазин
-                                  мы делаем для вашей фирмы и привлекательным, и удобным в плане юзабилити, и технологичным – продающим,
-                                  одним словом.</p>
-                          </div>
-                          <div class="column">
-                              <h3>Разработка порталов</h3>
-                              <p>Размер имеет значение – уж при разработке столь огромных ресурсов как интернет-портал так точно.
-                                  Потому что необходимо грамотно выстроить всю архитектуру корпоративного сайта портала, без чего
-                                  невозможна удобная работа с ним. А значит, именно на этом мы и сделаем основной акцент: и вы,
-                                  и ваши посетители оценят комфорт такого портала.</p>
-                          </div>
-                      </div>
-                      <div class="second-list">
-                          <div class="column">
-                              <h3>Разработка сайта банка</h3>
-                              <p>Лучшими характеристиками банка являются надежность и стабильность. И именно эти характеристики должны
-                                  быть у сайта финансовой организации! Не важно, речь об информационном разделе или о системе интернет
-                                  банкинга – наши разработчики предусмотрят все, чтобы ваш корпоративный портал в любой ситуации
-                                  работал без сбоев.</p>
-                          </div>
-                          <div class="column">
-                              <h3>Разработка B2B / B2C / CMS / HR</h3>
-                              <p>Оригинальные наработки, накопленные за 14 лет работы, позволяют веб-студии Quantum Projects заниматься
-                                  разработкой не только сайтов, но и специализированных технологических решений. Системы CMS для
-                                  создания любого сайта, разработка интернет банкинга, HR-системы для работы с персоналом, комплексы
-                                  для B2B и B2C – у нас вы найдете многое.</p>
-                          </div>
-                          <div class="column">
-                              <h3>Создание landing Page</h3>
-                              <p>Одна страница, но максимум эффективности – в случае с таким типом сайтов как лэндинг пэйдж описанный
-                                  принцип должен быть ведущим в разработке. У нашей веб-студии все именно так. Поэтому при заказе
-                                  подобного сайта, лэндинг пэйдж, у нас будьте уверены: он продемонстрирует максимально возможные
-                                  конверсии.
-                              </p>
-                          </div>
-                      </div>
-                  </div>
+                </div>
               </div>
+              <div class="mobile-list">
+                <div class="first-list">
+                  <div class="column">
+                    <h3 class="heavy">Создание стратегии разработки
+                    </h3>
+                    <p>Разработка правильной стратегии для вашей компании может быть сложной задачей. Мы прорабатываем и создаем комплексную
+                      стратегию для Вашего мобильного приложения. Стратегия которая направленна на повышение производительности,
+                      снижение рисков, а также увеличение отдачи от ваших инвестиций. Всегда готовы рассмотреть любые предложения
+                      и предложить решение основываясь на бизнес задачах продукта.
+                    </p>
+                  </div>
+                  <div class="column">
+                    <h3 class="heavy">Поддержка и гарантия</h3>
+                    <p>На каждый продукт, который побывал в руках наших разработчиков мы даем не только гарантию, но и предоставляем
+                      поддержку. Мы считаем что связь с нашими клиентами - это очень важно, особенно после релиза. Хотя с другой
+                      стороны, можем сказать что продукция разработанная в компании Quantum Projects не ломается.
+                    </p>
+                  </div>
+                  <div class="column">
+                    <h3 class="heavy">UI/UX</h3>
+                    <p>Мы стремимся к тому, чтобы пользовательский интерфейс был максимально интуитивно понятен. Данная задача не
+                      бывает легкой, но не для нашей команды. Опираясь на наши знания в области когнитивной психологии, стандартов
+                      мобильной разработки, передовых принципов дизайна и современных тенденций, мы делаем наши проекты простыми,
+                      инстинктивными и красивыми. </p>
+                  </div>
+                </div>
+                <div class="second-list">
+                  <div class="column">
+                    <h3 class="heavy">Технологии</h3>
+                    <p>Использование современных технологий для разработки мобильных приложений есть залогом успешного релиза и последующего
+                      развития мобильного приложения. Анализ, прототипирование, разработка, тестирование - это самая малость этапов,
+                      которые мы применяем для наших разработок. Мы никогда не обещаем свернуть горы, но стараемся достичь максимума
+                      при любом запросе нашего клиента, то есть Вас.</p>
+                  </div>
+                  <div class="column">
+                    <h3 class="heavy">Кросплатформенность. IOS, Android</h3>
+                    <p>Мобильные технологии меняют способ ведения бизнеса. Но как лучше всего использовать эту технологию? Quantum
+                      Projects предлагает многолетний опыт разработки мобильных приложений под iOS и Android. Вы можете рассчитывать
+                      на то, что мы предоставим надежное и интуитивно понятное решение независимо от платформы и устройства.</p>
+                  </div>
+                  <div class="column">
+                    <h3 class="heavy">Решение бизнесс задач</h3>
+                    <p>Наши клиенты любят работать с нами, ведь мы не просто создаем приложение и исчезаем. Релиз составляет лишь
+                      20% от всего процесса. Как только в магазине приложений появиться иконка Вашего продукта, Вам понадобится
+                      тот, кто сможет ответить на множество вопросов и дать вам лучшие инструменты и стратегии, которые помогут
+                      сделать вас чемпионом на ринге продуктов для мобильных девайсов. Доверьтесь нашим знаниям и мы поможем продвинуть
+                      Ваш бизнес за максимально короткий период.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="footer">
-            <div class="container">
-              <div class="form">
-                <div class="form-title">
-                  <h2>Обратная связь:</h2>
+        </div>
+      </section>
+      <section class="section lead">
+        <div class="section-inner">
+          <div class="container">
+            <div class="container-bg">
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+            </div>
+            <div class="lead-content">
+              <div class="lead-header">
+                <div class="text">
+                  <h2>Продвижение и лидогенерация</h2>
+                  <p>Получение контактов потенциальных клиентов, заинтересованных в товаре или услуге. В переводе с английского lead
+                    – это наводка. То есть лидогенерация это генерация наводок потенциальных покупателей.
+                    <br> Именно лиды являются главным в продвижении сайта. Заказывая продвижение ресурса, главная задача увеличить
+                    поток заказов, следствие чего рост прибыли с сайта. Отдел рекламы и маркетинга в компании Quantum Projects
+                    полностью в вашем распоряжении, но есть один нюанс, командовать парадом будем мы!</p>
                 </div>
-                <div class="inputs">
-                  <div>
-                    <input type="text" placeholder="Ваше имя:">
-                    <input type="text" placeholder="Компания">
-                  </div>
-                  <div>
-                    <input type="text" placeholder="E-mail:">
-                    <input type="text" placeholder="Мобильный телефон:">
-                  </div>
+                <div class="header-img">
+                  <img src="img/spaceship.png" alt="img">
                 </div>
-                <div class="textarea">
-                  <textarea cols="30" rows="10"></textarea>
-                </div>
-                <div class="button-and-socials">
-                  <div class="button">
-                    <button class="btn">отправить запрос</button>
+              </div>
+              <div class="lead-list">
+                <div class="first-list">
+                  <div class="column">
+                    <h3 class="heavy">Интернет реклама</h3>
+                    <p>Доказывать то что реклама в интернете работает нет необходимости. На данный момент бюджеты рекламных компаний
+                      в сети гораздо превышают бюджеты наружной и телевизионной рекламы. Наш рекламный отдел самый большой в компании.
+                      Мы уделяем много времени и сил продвижению ресурсов. За время работы мы многому научились и больше не повторяем
+                      ошибок, а даже наоборот перестали их совершать. Рекламный отдел компании Quantum Projects - это симбиоз профессионализма,
+                      расчетливости, стратегии и человечности. Хотя все рекламщики это еще те хищники.
+                    </p>
                   </div>
-                  <div class="social">
-                    <a href="">
-                      <svg width="20" height="20" viewBox="0 0 20 20">
-                        <g fill="none" fill-rule="evenodd" class="svg">
-                          <path fill="#000" fill-rule="nonzero" class="svg" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10s4.477 10 10 10 10-4.477 10-10z"
-                          />
-                          <path stroke="#FFF" d="M18.8 10a8.8 8.8 0 1 0-17.6 0 8.8 8.8 0 0 0 17.6 0z" />
-                          <path fill="#FFF" d="M10.176 5.59c-.252 0-.5.021-.74.061A2.702 2.702 0 0 0 7.94 5.2C6.426 5.2 5.2 6.445 5.2 7.98c0 .559.162 1.078.441 1.514a4.68 4.68 0 0 0-.057.73c0 2.56 2.055 4.635 4.592 4.635.286 0 .565-.028.836-.078.42.265.916.419 1.448.419 1.514 0 2.74-1.245 2.74-2.78 0-.58-.175-1.12-.476-1.567.028-.206.044-.415.044-.629 0-2.559-2.056-4.634-4.592-4.634z"
-                          />
-                          <path fill="#000" class="svg" d="M7.987 11.477c.57-.038.911.659 1.215.852.304.194 1.459.634 2.069-.077.664-.775-.442-1.175-1.253-1.296-1.157-.175-2.619-.814-2.505-2.072.114-1.257 1.048-1.902 2.03-1.993 1.253-.116 2.069.193 2.714.755.746.648.342 1.373-.133 1.431-.474.058-1.005-1.066-2.049-1.083-1.076-.017-1.803 1.141-.475 1.47 1.329.33 2.752.465 3.264 1.704.513 1.239-.796 2.554-2.258 2.632-1.46.077-2.144-.252-2.77-.851-.7-.67-.419-1.433.151-1.472z"
-                          />
-                        </g>
-                      </svg>
-                    </a>
-                    <a href="">
-                      <svg width="20" height="20" viewBox="0 0 20 20">
-                        <g fill="none" fill-rule="evenodd" class="svg">
-                          <path fill="#000" fill-rule="nonzero" class="svg" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0z"
-                          />
-                          <path stroke="#FFF" d="M10 1.2a8.8 8.8 0 1 0 0 17.6 8.8 8.8 0 0 0 0-17.6z" />
-                          <path fill="#FFF" d="M14.8 12.786V6.8l-3.495 3.386zM5.2 12.786l3.495-2.6L5.2 6.8zM9.166 10.642L5.2 13.2h9.6l-3.966-2.558-.834.808zM5.488 6.8L10 10.423 14.512 6.8z"
-                          />
-                        </g>
-                      </svg>
-                    </a>
-                    <a href="">
-                      <svg width="20" height="20" viewBox="0 0 20 20">
-                        <g fill="none" fill-rule="evenodd" class="svg">
-                          <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
-                          />
-                          <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
-                          <path fill="#FFF" d="M10.726 14.4V10h1.301l.173-1.517h-1.474l.002-.759c0-.395.04-.607.649-.607h.814V5.6h-1.302c-1.564 0-2.114.736-2.114 1.973v.91H7.8V10h.975v4.4h1.95z"
-                          />
-                        </g>
-                      </svg>
-                    </a>
-                    <a href="">
-                      <svg width="20" height="20" viewBox="0 0 20 20">
-                        <g fill="none" fill-rule="evenodd" class="svg">
-                          <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
-                          />
-                          <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
-                          <path fill="#FFF" d="M5.6 8.047v5.816h1.884V8.047zM6.666 5.2C6.02 5.2 5.6 5.634 5.6 6.205c0 .558.409 1.005 1.041 1.005h.012c.657 0 1.067-.447 1.067-1.005-.013-.57-.41-1.005-1.054-1.005zM12.23 8.047c-1 0-1.447.565-1.697.96v-.823H8.648c.025.546 0 5.816 0 5.816h1.885v-3.248c0-.174.012-.347.062-.472.136-.347.446-.707.966-.707.682 0 .955.534.955 1.315V14H14.4v-3.335c0-1.786-.93-2.618-2.17-2.618z"
-                          />
-                        </g>
-                      </svg>
-                    </a>
+                  <div class="column">
+                    <h3 class="heavy">Оптимизация</h3>
+                    <p>Что же такое оптимизация и зачем ее проводить? Вы наверняка попадали в ситуацию когда ваша рекламная компания
+                      не срабатывала и на это было множество причин. Причины были настолько разными и неожиданными, что приходилось
+                      задуматься над другим вопросом - как вернуть потраченный бюджет. Оптимизация - это и есть инструмент, который
+                      не позволит Вам ошибиться и слить деньги в интернет трубу. Это глубокий анализ рекламной компании для достижения
+                      поставленных целей и получения максимальной выгоды.</p>
+                  </div>
+                  <div class="column">
+                    <h3 class="heavy">SMM</h3>
+                    <p>В скольких социальных сетях Вы зарегистрированы и сколько из них Вы используете в своем бизнесе? Чаще всего
+                      бизнесмены остаются консерваторами в подходах к своему делу. Но мир меняется! С появлением соц сетей он изменился
+                      еще больше. Теперь необязательно отправлять резюме на работу, достаточно отправить ссылку на свой профайл
+                      на FB. Соответсвенно с развитием социальных платформ, появились специалисты, которые помогают превратить
+                      Facebook, instagram, VK, LinkIdn и так далее в мощные инструменты получения дохода. Наши специалисты разбираться
+                      во всем. Ну почти во всем, Одноклассники прошли мимо.</p>
                   </div>
                 </div>
+                <div class="second-list">
+                  <div class="column">
+                    <h3 class="heavy">SEM</h3>
+                    <p>Поисковый маркетинг комплекс мероприятий, направленный на увеличение посещаемости сайта его целевой аудиторией
+                      с помощью поисковых машин. Какой бы поисковой машиной вы не пользовались, просто знайте, что все Ваши запросы
+                      обрабатываются специалистами по поисковым машинам. Вы политик, бизнесмен, артист, простой человек не важо,
+                      поисковики знают о вас больше чем вы сами. И это не шпионский фильм, это - жизнь!!! Представьте если эту
+                      технологию использовать в бизнес целях. На запрос о свежих яблоках, пользователь видит именно ваш сайт по
+                      продаже яблок, заходит, покупает, приносит прибыль. Неплохо, правда? </p>
+                  </div>
+                  <div class="column">
+                    <h3 class="heavy">SEO</h3>
+                    <p>В связи с ежедневным приростом конкуренции в интернете, вы всегда должны быть на коне. Так как это не легко
+                      на вашем ресурсе необходима SEO оптимизация. Не задумывайтесь над расшифровкой данной аббревиатуры, лучше
+                      задумайтесь над тем какие результаты это принесет: уникальный контент, технологии, для поисковых машин, правильное
+                      количество внешних ссылок, поведенческий фактор, корректная верстка, чистый код, малый вес страницы. Звучит
+                      как всегда страшновато, но для наших специалистов по SEO оптимизации. </p>
+                  </div>
+                  <div class="column">
+                    <h3 class="heavy">Media Buying</h3>
+                    <p>Существует такая профессия - медиабаер. Профессия тяжелая и не каждому человеку по зубам. Ведь нужен четкий
+                      расчет, хладнокровие и стальные нервы. Иначе провал и потеря средств. Эти ребята как аукционисты на просторах
+                      интернета. Они скупают рекламные площадки исходя из выработанной стратегии и плана. Чутье не подводит их
+                      практически никогда, ведь от покупки правильной площади для рекламы, зависит результативность трафика на
+                      ресурс клиента. Вам стало интересно? Тогда приходите в Quantum Projects и мы вас с удовольствием познакомим.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section fourth">
+        <div class="section-inner">
+          <div class="bg"></div>
+          <div class="container">
+            <div class="container-bg">
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+              <div class="container-bg-col"></div>
+            </div>
+            <div class="bg-hand"></div>
+            <div class="map-and-contacts">
+              <div class="map" id="map">
+      
               </div>
               <div class="contacts">
                 <div class="address">
@@ -798,116 +751,6 @@
                   <h6>Email:</h6>
                   <p>info@quantum_projects.net</p>
                 </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="mobile">
-        <div class="container">
-          <div class="container-bg">
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-          </div>
-          <div class="mobile-content">
-            <div class="mobile-header">
-              <div class="text">
-                <h2>Разработка мобильных приложений любого масштаба</h2>
-                <p>В 21-м веке человечество перешло в новую эру технологического развития. Мобильный телефон стал не только комуникационным
-                  устройством, но и повседневным инструментом для решения важных задач. Теперь что бы приобрести товар или услугу
-                  не надо идти в магазин или салон, достаточно достать телефон из своего кармана. Для отслеживания бизнес процессов
-                  не обязательно вытягивать ноутбук из сумки думая о том, где поключиться к WI-FI сети. Мобильные устройства обрели
-                  новый смысл и продолжают свое развитие с геометричкой прогрессией. Quantum Projects верит в то, что человечество
-                  находиться на старте еще одной технологической революции и всячески способствует развитию этой идеи. Мы помогаем
-                  реализовывать смелые идеи наших клиентов и самое главное не стесняемся говорить Вам, решит ли эта идея бизнес
-                  задачу. Вся команда компании Quantum Projects будет рада сотруднечеству. Добро пожаловать!</p>
-              </div>
-              <div class="header-img">
-                <div class="header-img-container" id="mobile">
-                  <div class="container-img" data-depth="0.5">
-                    <img class="img1" src="../../img/mobile2.png" alt="img">
-                  </div>
-                  <div class="container-img" data-depth="0.2">
-                    <img class="img2" src="../../img/mobile1.png" alt="img">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mobile-list">
-              <div class="first-list">
-                <div class="column">
-                  <h3 class="heavy">Создание стратегии разработки
-                  </h3>
-                  <p>Разработка правильной стратегии для вашей компании может быть сложной задачей. Мы прорабатываем и создаем комплексную
-                    стратегию для Вашего мобильного приложения. Стратегия которая направленна на повышение производительности,
-                    снижение рисков, а также увеличение отдачи от ваших инвестиций. Всегда готовы рассмотреть любые предложения
-                    и предложить решение основываясь на бизнес задачах продукта.
-                  </p>
-                </div>
-                <div class="column">
-                  <h3 class="heavy">Поддержка и гарантия</h3>
-                  <p>На каждый продукт, который побывал в руках наших разработчиков мы даем не только гарантию, но и предоставляем
-                    поддержку. Мы считаем что связь с нашими клиентами - это очень важно, особенно после релиза. Хотя с другой
-                    стороны, можем сказать что продукция разработанная в компании Quantum Projects не ломается.
-                  </p>
-                </div>
-                <div class="column">
-                  <h3 class="heavy">UI/UX</h3>
-                  <p>Мы стремимся к тому, чтобы пользовательский интерфейс был максимально интуитивно понятен. Данная задача не бывает
-                    легкой, но не для нашей команды. Опираясь на наши знания в области когнитивной психологии, стандартов мобильной
-                    разработки, передовых принципов дизайна и современных тенденций, мы делаем наши проекты простыми, инстинктивными
-                    и красивыми. </p>
-                </div>
-              </div>
-              <div class="second-list">
-                <div class="column">
-                  <h3 class="heavy">Технологии</h3>
-                  <p>Использование современных технологий для разработки мобильных приложений есть залогом успешного релиза и последующего
-                    развития мобильного приложения. Анализ, прототипирование, разработка, тестирование - это самая малость этапов,
-                    которые мы применяем для наших разработок. Мы никогда не обещаем свернуть горы, но стараемся достичь максимума
-                    при любом запросе нашего клиента, то есть Вас.</p>
-                </div>
-                <div class="column">
-                  <h3 class="heavy">Кросплатформенность. IOS, Android</h3>
-                  <p>Мобильные технологии меняют способ ведения бизнеса. Но как лучше всего использовать эту технологию? Quantum Projects
-                    предлагает многолетний опыт разработки мобильных приложений под iOS и Android. Вы можете рассчитывать на то,
-                    что мы предоставим надежное и интуитивно понятное решение независимо от платформы и устройства.</p>
-                </div>
-                <div class="column">
-                  <h3 class="heavy">Решение бизнесс задач</h3>
-                  <p>Наши клиенты любят работать с нами, ведь мы не просто создаем приложение и исчезаем. Релиз составляет лишь 20%
-                    от всего процесса. Как только в магазине приложений появиться иконка Вашего продукта, Вам понадобится тот,
-                    кто сможет ответить на множество вопросов и дать вам лучшие инструменты и стратегии, которые помогут сделать
-                    вас чемпионом на ринге продуктов для мобильных девайсов. Доверьтесь нашим знаниям и мы поможем продвинуть Ваш
-                    бизнес за максимально короткий период.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer">
-          <div class="container">
-            <div class="form">
-              <div class="form-title">
-                <h2>Обратная связь:</h2>
-              </div>
-              <div class="inputs">
-                <div>
-                  <input type="text" placeholder="Ваше имя:">
-                  <input type="text" placeholder="Компания">
-                </div>
-                <div>
-                  <input type="text" placeholder="E-mail:">
-                  <input type="text" placeholder="Мобильный телефон:">
-                </div>
-              </div>
-              <div class="textarea">
-                <textarea cols="30" rows="10"></textarea>
-              </div>
-              <div class="button-and-socials">
-                <div class="button">
-                  <button class="btn">отправить запрос</button>
-                </div>
                 <div class="social">
                   <a href="">
                     <svg width="20" height="20" viewBox="0 0 20 20">
@@ -922,7 +765,7 @@
                       </g>
                     </svg>
                   </a>
-                  <a href="">
+                  <a href="#">
                     <svg width="20" height="20" viewBox="0 0 20 20">
                       <g fill="none" fill-rule="evenodd" class="svg">
                         <path fill="#000" fill-rule="nonzero" class="svg" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0z"
@@ -933,7 +776,7 @@
                       </g>
                     </svg>
                   </a>
-                  <a href="">
+                  <a href="#">
                     <svg width="20" height="20" viewBox="0 0 20 20">
                       <g fill="none" fill-rule="evenodd" class="svg">
                         <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
@@ -944,7 +787,7 @@
                       </g>
                     </svg>
                   </a>
-                  <a href="">
+                  <a href="#">
                     <svg width="20" height="20" viewBox="0 0 20 20">
                       <g fill="none" fill-rule="evenodd" class="svg">
                         <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
@@ -958,203 +801,27 @@
                 </div>
               </div>
             </div>
-            <div class="contacts">
-              <div class="address">
-                <h6>Киев, Украина</h6>
-                <p>Quantum Projects | Digital-агентство</p>
-                <p>Веб-студия создание и разработка сайтов</p>
-              </div>
-              <div class="phone">
-                <h6>Телефон:</h6>
-                <p>+38 (093) 971 63 36</p>
-              </div>
-              <div class="skype">
-                <h6>Skype:</h6>
-                <p>quantum</p>
-              </div>
-              <div class="mail">
-                <h6>Email:</h6>
-                <p>info@quantum_projects.net</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="lead">
-        <div class="container">
-          <div class="container-bg">
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-            <div class="container-bg-col"></div>
-          </div>
-          <div class="lead-content">
-            <div class="lead-header">
-              <div class="text">
-                <h2>Продвижение и лидогенерация</h2>
-                <p>Получение контактов потенциальных клиентов, заинтересованных в товаре или услуге. В переводе с английского lead –
-                  это наводка. То есть лидогенерация это генерация наводок потенциальных покупателей.
-                  <br> Именно лиды являются главным в продвижении сайта. Заказывая продвижение ресурса, главная задача увеличить поток
-                  заказов, следствие чего рост прибыли с сайта. Отдел рекламы и маркетинга в компании Quantum Projects полностью
-                  в вашем распоряжении, но есть один нюанс, командовать парадом будем мы!</p>
-              </div>
-              <div class="header-img">
-                <img src="img/spaceship.png" alt="img">
-              </div>
-            </div>
-            <div class="lead-list">
-              <div class="first-list">
-                <div class="column">
-                  <h3 class="heavy">Интернет реклама</h3>
-                  <p>Доказывать то что реклама в интернете работает нет необходимости. На данный момент бюджеты рекламных компаний в
-                    сети гораздо превышают бюджеты наружной и телевизионной рекламы. Наш рекламный отдел самый большой в компании.
-                    Мы уделяем много времени и сил продвижению ресурсов. За время работы мы многому научились и больше не повторяем
-                    ошибок, а даже наоборот перестали их совершать. Рекламный отдел компании Quantum Projects - это симбиоз профессионализма,
-                    расчетливости, стратегии и человечности. Хотя все рекламщики это еще те хищники.
-                  </p>
-                </div>
-                <div class="column">
-                  <h3 class="heavy">Оптимизация</h3>
-                  <p>Что же такое оптимизация и зачем ее проводить? Вы наверняка попадали в ситуацию когда ваша рекламная компания не
-                    срабатывала и на это было множество причин. Причины были настолько разными и неожиданными, что приходилось задуматься
-                    над другим вопросом - как вернуть потраченный бюджет. Оптимизация - это и есть инструмент, который не позволит
-                    Вам ошибиться и слить деньги в интернет трубу. Это глубокий анализ рекламной компании для достижения поставленных
-                    целей и получения максимальной выгоды.</p>
-                </div>
-                <div class="column">
-                  <h3 class="heavy">SMM</h3>
-                  <p>В скольких социальных сетях Вы зарегистрированы и сколько из них Вы используете в своем бизнесе? Чаще всего бизнесмены
-                    остаются консерваторами в подходах к своему делу. Но мир меняется! С появлением соц сетей он изменился еще больше.
-                    Теперь необязательно отправлять резюме на работу, достаточно отправить ссылку на свой профайл на FB. Соответсвенно
-                    с развитием социальных платформ, появились специалисты, которые помогают превратить Facebook, instagram, VK,
-                    LinkIdn и так далее в мощные инструменты получения дохода. Наши специалисты разбираться во всем. Ну почти во
-                    всем, Одноклассники прошли мимо.</p>
-                </div>
-              </div>
-              <div class="second-list">
-                <div class="column">
-                  <h3 class="heavy">SEM</h3>
-                  <p>Поисковый маркетинг комплекс мероприятий, направленный на увеличение посещаемости сайта его целевой аудиторией
-                    с помощью поисковых машин. Какой бы поисковой машиной вы не пользовались, просто знайте, что все Ваши запросы
-                    обрабатываются специалистами по поисковым машинам. Вы политик, бизнесмен, артист, простой человек не важо, поисковики
-                    знают о вас больше чем вы сами. И это не шпионский фильм, это - жизнь!!! Представьте если эту технологию использовать
-                    в бизнес целях. На запрос о свежих яблоках, пользователь видит именно ваш сайт по продаже яблок, заходит, покупает,
-                    приносит прибыль. Неплохо, правда? </p>
-                </div>
-                <div class="column">
-                  <h3 class="heavy">SEO</h3>
-                  <p>В связи с ежедневным приростом конкуренции в интернете, вы всегда должны быть на коне. Так как это не легко на
-                    вашем ресурсе необходима SEO оптимизация. Не задумывайтесь над расшифровкой данной аббревиатуры, лучше задумайтесь
-                    над тем какие результаты это принесет: уникальный контент, технологии, для поисковых машин, правильное количество
-                    внешних ссылок, поведенческий фактор, корректная верстка, чистый код, малый вес страницы. Звучит как всегда страшновато,
-                    но для наших специалистов по SEO оптимизации. </p>
-                </div>
-                <div class="column">
-                  <h3 class="heavy">Media Buying</h3>
-                  <p>Существует такая профессия - медиабаер. Профессия тяжелая и не каждому человеку по зубам. Ведь нужен четкий расчет,
-                    хладнокровие и стальные нервы. Иначе провал и потеря средств. Эти ребята как аукционисты на просторах интернета.
-                    Они скупают рекламные площадки исходя из выработанной стратегии и плана. Чутье не подводит их практически никогда,
-                    ведь от покупки правильной площади для рекламы, зависит результативность трафика на ресурс клиента. Вам стало
-                    интересно? Тогда приходите в Quantum Projects и мы вас с удовольствием познакомим.</p>
-                </div>
-              </div>
-            </div>
-          </div>    
-        </div>
-        <div class="footer">
-          <div class="container">
             <div class="form">
-              <div class="form-title">
+              <div class="title">
                 <h2>Обратная связь:</h2>
               </div>
-              <div class="inputs">
-                <div>
-                  <input type="text" placeholder="Ваше имя:">
-                  <input type="text" placeholder="Компания">
+              <form>
+                <div class="inputs">
+                  <input type="email" placeholder="E-mail">
+                  <input type="text" placeholder="Ваше имя">
                 </div>
-                <div>
-                  <input type="text" placeholder="E-mail:">
-                  <input type="text" placeholder="Мобильный телефон:">
+                <div class="textarea">
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
-              </div>
-              <div class="textarea">
-                <textarea cols="30" rows="10"></textarea>
-              </div>
-              <div class="button-and-socials">
                 <div class="button">
-                  <button class="btn">отправить запрос</button>
+                  <button>Отправить запрос</button>
                 </div>
-                <div class="social">
-                  <a href="">
-                    <svg width="20" height="20" viewBox="0 0 20 20">
-                      <g fill="none" fill-rule="evenodd" class="svg">
-                        <path fill="#000" fill-rule="nonzero" class="svg" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10s4.477 10 10 10 10-4.477 10-10z"
-                        />
-                        <path stroke="#FFF" d="M18.8 10a8.8 8.8 0 1 0-17.6 0 8.8 8.8 0 0 0 17.6 0z" />
-                        <path fill="#FFF" d="M10.176 5.59c-.252 0-.5.021-.74.061A2.702 2.702 0 0 0 7.94 5.2C6.426 5.2 5.2 6.445 5.2 7.98c0 .559.162 1.078.441 1.514a4.68 4.68 0 0 0-.057.73c0 2.56 2.055 4.635 4.592 4.635.286 0 .565-.028.836-.078.42.265.916.419 1.448.419 1.514 0 2.74-1.245 2.74-2.78 0-.58-.175-1.12-.476-1.567.028-.206.044-.415.044-.629 0-2.559-2.056-4.634-4.592-4.634z"
-                        />
-                        <path fill="#000" class="svg" d="M7.987 11.477c.57-.038.911.659 1.215.852.304.194 1.459.634 2.069-.077.664-.775-.442-1.175-1.253-1.296-1.157-.175-2.619-.814-2.505-2.072.114-1.257 1.048-1.902 2.03-1.993 1.253-.116 2.069.193 2.714.755.746.648.342 1.373-.133 1.431-.474.058-1.005-1.066-2.049-1.083-1.076-.017-1.803 1.141-.475 1.47 1.329.33 2.752.465 3.264 1.704.513 1.239-.796 2.554-2.258 2.632-1.46.077-2.144-.252-2.77-.851-.7-.67-.419-1.433.151-1.472z"
-                        />
-                      </g>
-                    </svg>
-                  </a>
-                  <a href="">
-                    <svg width="20" height="20" viewBox="0 0 20 20">
-                      <g fill="none" fill-rule="evenodd" class="svg">
-                        <path fill="#000" fill-rule="nonzero" class="svg" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0z"
-                        />
-                        <path stroke="#FFF" d="M10 1.2a8.8 8.8 0 1 0 0 17.6 8.8 8.8 0 0 0 0-17.6z" />
-                        <path fill="#FFF" d="M14.8 12.786V6.8l-3.495 3.386zM5.2 12.786l3.495-2.6L5.2 6.8zM9.166 10.642L5.2 13.2h9.6l-3.966-2.558-.834.808zM5.488 6.8L10 10.423 14.512 6.8z"
-                        />
-                      </g>
-                    </svg>
-                  </a>
-                  <a href="">
-                    <svg width="20" height="20" viewBox="0 0 20 20">
-                      <g fill="none" fill-rule="evenodd" class="svg">
-                        <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
-                        />
-                        <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
-                        <path fill="#FFF" d="M10.726 14.4V10h1.301l.173-1.517h-1.474l.002-.759c0-.395.04-.607.649-.607h.814V5.6h-1.302c-1.564 0-2.114.736-2.114 1.973v.91H7.8V10h.975v4.4h1.95z"
-                        />
-                      </g>
-                    </svg>
-                  </a>
-                  <a href="">
-                    <svg width="20" height="20" viewBox="0 0 20 20">
-                      <g fill="none" fill-rule="evenodd" class="svg">
-                        <path fill="#000" class="svg" fill-rule="nonzero" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
-                        />
-                        <path stroke="#FFF" d="M10 18.8a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6z" />
-                        <path fill="#FFF" d="M5.6 8.047v5.816h1.884V8.047zM6.666 5.2C6.02 5.2 5.6 5.634 5.6 6.205c0 .558.409 1.005 1.041 1.005h.012c.657 0 1.067-.447 1.067-1.005-.013-.57-.41-1.005-1.054-1.005zM12.23 8.047c-1 0-1.447.565-1.697.96v-.823H8.648c.025.546 0 5.816 0 5.816h1.885v-3.248c0-.174.012-.347.062-.472.136-.347.446-.707.966-.707.682 0 .955.534.955 1.315V14H14.4v-3.335c0-1.786-.93-2.618-2.17-2.618z"
-                        />
-                      </g>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="contacts">
-              <div class="address">
-                <h6>Киев, Украина</h6>
-                <p>Quantum Projects | Digital-агентство</p>
-                <p>Веб-студия создание и разработка сайтов</p>
-              </div>
-              <div class="phone">
-                <h6>Телефон:</h6>
-                <p>+38 (093) 971 63 36</p>
-              </div>
-              <div class="skype">
-                <h6>Skype:</h6>
-                <p>quantum</p>
-              </div>
-              <div class="mail">
-                <h6>Email:</h6>
-                <p>info@quantum_projects.net</p>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
+      
       
     </main>
   </div>
@@ -1217,6 +884,7 @@
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQ--uMQILR52x6-sZYlALIcVDSFBN8_0&callback=initMap">
   </script>
+  <script src="../libs/fullpage.js/dist/jquery.fullpage.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 </body>
 
