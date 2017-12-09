@@ -24,6 +24,7 @@ $(function() {
   $('.toggleMenu').click(function() {
     $('#menu').toggleClass('show-menu');
     $('.main').toggleClass('blur');
+    $('.burger').toggleClass('show');
   });
 
   $('.menu-item').click(function() {
@@ -35,21 +36,25 @@ $(function() {
     var currentAnchor = location.hash.substring(1);
     var prevOrder = 0;
     for (var i = 0; i < navAnchors.length; i++) {
-      if ((anchorOrder = navAnchors[i] === currentAnchor)) {
+      if (navAnchors[i] === currentAnchor) {
         prevOrder = i - 1;
       }
     }
-    location.hash = navAnchors[prevOrder];
+    if (prevOrder >= 0) {
+      location.hash = navAnchors[prevOrder];
+    }
   });
 
   $('#next').click(function() {
     var currentAnchor = location.hash.substring(1);
     var nextOrder = 0;
     for (var i = 0; i < navAnchors.length; i++) {
-      if ((anchorOrder = navAnchors[i] === currentAnchor)) {
+      if (navAnchors[i] === currentAnchor) {
         nextOrder = i + 1;
       }
     }
-    location.hash = navAnchors[nextOrder];
+    if (nextOrder < navAnchors.length) {
+      location.hash = navAnchors[nextOrder];
+    }
   });
 });
