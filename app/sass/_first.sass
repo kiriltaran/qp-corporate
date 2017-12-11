@@ -3,10 +3,6 @@
 	display: flex
 	.container
 		position: absolute
-		.bg-triangles
-			position: absolute
-			top: -95px
-			right: 45px
 	.slide
 		.slider-item-wrapper
 			display: flex
@@ -97,9 +93,36 @@
 			.mobile
 				.slider-item-square
 					background-color: #aae64c
+				.bg-triangles
+					opacity: .5
+					position: absolute
+					top: -250px
+					right: -250px
+					animation: rotate 60s linear alternate infinite;
+				@keyframes rotate
+  			100% 
+    			transform: rotate(360deg)
 			.web
 				.slider-item-square
 					background-color: #af96ff
+				.bg-waves
+					opacity: .5
+					position: absolute
+					top: -220px
+					left: -200px
+					animation: shake 10s linear alternate infinite;
+				@keyframes shake
+  			100% 
+    			transform: translate(200px)
 			.lead
 				.slider-item-square
 					background-color: #e386f8
+				.bg-squares
+					opacity: .5
+					position: absolute
+					bottom: -350px
+					right: -200px
+					animation: shakerotate 60s linear alternate infinite;
+				@keyframes shakerotate
+  			100% 
+    			transform: translate(-200px) rotate(999deg)
