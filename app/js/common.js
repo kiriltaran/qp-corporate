@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   var navAnchors = ['first', 'features', 'web', 'mobile', 'lead', 'last'];
 
   var slide1 = document.getElementById('slide1');
@@ -20,6 +20,9 @@ $(function() {
     menu: '#nav-list',
     anchors: navAnchors,
     controlArrows: false,
+    css3: true,
+    scrollingSpeed: 1000,
+    easing: 'easeInOutCirc',
   });
 
   $('.toggleMenu').click(function() {
@@ -44,7 +47,7 @@ $(function() {
 
   setInterval(function() {
     $.fn.fullpage.moveSlideRight();
-  }, 15000);
+  }, 8000);
 
   $('.prev-slide').click(function() {
     $.fn.fullpage.moveSlideLeft();
