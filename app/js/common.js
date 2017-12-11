@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   var navAnchors = ['first', 'features', 'web', 'mobile', 'lead', 'last'];
 
   var slide1 = document.getElementById('slide1');
@@ -44,7 +44,7 @@ $(function() {
 
   setInterval(function() {
     $.fn.fullpage.moveSlideRight();
-  }, 15000);
+  }, 8000);
 
   $('.prev-slide').click(function() {
     $.fn.fullpage.moveSlideLeft();
