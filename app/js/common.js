@@ -20,6 +20,9 @@ $(document).ready(function() {
     menu: '#nav-list',
     anchors: navAnchors,
     controlArrows: false,
+    css3: true,
+    scrollingSpeed: 1000,
+    easing: 'easeInOutCirc',
   });
 
   $('.toggleMenu').click(function() {
