@@ -1,1 +1,1 @@
-<h1>Corporate one screen page with animations</h1>
+<h1>Corporate single-screen page with animations</h1>
